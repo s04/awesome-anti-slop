@@ -2,7 +2,7 @@
 
 A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts, UGC and video scripts.
 
-125 resources. Alphabetical within each category. No rankings or recommendations.
+143 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
@@ -79,6 +79,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [danielabar/meblog / blog-editor](https://github.com/danielabar/meblog/blob/master/.claude/skills/blog-editor/SKILL.md) - A personal blog-editing workflow covering prose, technical accuracy and publication metadata.
 - [pedronauck/skills / writing-tech-post](https://github.com/pedronauck/skills/blob/main/skills/mine/writing-tech-post/SKILL.md) - Engineering articles with genre-specific references for postmortems, migrations, performance work and tutorials.
 - [RealAdarsh/skills / technical-blog-writing](https://github.com/RealAdarsh/skills/blob/main/skills/technical-blog-writing/SKILL.md) - Technical blog-writing instructions.
+- [richtabor/agent-skills / technical-writing](https://github.com/richtabor/agent-skills/blob/main/skills/technical-writing/SKILL.md) - Technical-blog workflow grounded in codebase research, a personal style guide and anti-pattern references, with draft creation and optional WordPress draft publishing.
 - [sjmoran/claude-blog-prose / blog-prose](https://github.com/sjmoran/claude-blog-prose/blob/master/skills/blog-prose/SKILL.md) - Rules for writing and reviewing blog posts, devlogs, tutorials and opinion pieces.
 - [tamirdresher/squad-skills / blog-writing](https://github.com/tamirdresher/squad-skills/blob/main/plugins/blog-writing/SKILL.md) - Technical blogging conventions for narrative, code examples and post series.
 - [tuananhbui89/skills / research-blog-writer](https://github.com/tuananhbui89/skills/blob/main/research-blog-writer/SKILL.md) - Research-backed technical blog posts with citations and layered explanations.
@@ -118,7 +119,10 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [heygen-com/skills / heygen-video](https://github.com/heygen-com/skills/blob/master/heygen-video/SKILL.md) - Platform skill for presenter videos, combining script discovery, creative direction, avatar selection and video production.
 - [heygen-com/skills / official-prompt-guide.md](https://github.com/heygen-com/skills/blob/master/heygen-video/references/official-prompt-guide.md) - Platform reference covering script-driven prompts, scene descriptions, voiceover, visual treatments and attachments.
 - [heygen-com/skills / prompt-craft.md](https://github.com/heygen-com/skills/blob/master/heygen-video/references/prompt-craft.md) - Platform reference for structuring a video brief, scene dialogue, exact on-screen text, media choices and style direction.
+- [hivijc/higgsfield-ugc-playbook / SKILL.md](https://github.com/hivijc/higgsfield-ugc-playbook/blob/main/SKILL.md) - Community Higgsfield playbook covering creative briefs, six hook archetypes, timed ad scripts, shot prompts and production review; includes product-specific examples.
 - [Jarad-z/ugc-video-skill / SKILL.md](https://github.com/Jarad-z/ugc-video-skill/blob/main/SKILL.md) - Community skill for model-specific UGC scripts and video prompts, with creator personas, plausible settings, dialogue and continuous or timed scene formats.
+- [joebenscoter86/higgsfield-ugc-workflow / ugc-brief](https://github.com/joebenscoter86/higgsfield-ugc-workflow/blob/main/skills/ugc-brief/SKILL.md) - Community planning skill for creator-led ads, consolidating product facts, audience angle, voiceover intent and a three-cut shot map before generation.
+- [joebenscoter86/higgsfield-ugc-workflow / ugc-multicut-script](https://github.com/joebenscoter86/higgsfield-ugc-workflow/blob/main/skills/ugc-multicut-script/SKILL.md) - Community authoring skill for three-cut UGC scripts, timed dialogue, camera and action cues, and phonetic voice prompts within a Higgsfield production pipeline.
 - [riffkit/skills / ugc-ad-creative](https://github.com/riffkit/skills/blob/main/ugc-ad-creative/SKILL.md) - Riffkit workflow for adapting a reference video or written idea into a UGC ad, with product and optional character selection; identifies riffkit.ai/SKILL.md as its canonical source.
 - [tengbot/aiads-skills / ugc-ad-skill](https://github.com/tengbot/aiads-skills/blob/main/.agents/skills/ugc-ad-skill/SKILL.md) - AIADS.IM-oriented skill for ad angles, hooks, short scripts, storyboards, captions and creator briefs; published under tengbot.
 
@@ -133,11 +137,22 @@ The collection comes first. The next stage is an amalgamation of the collected m
 ## Editing and voice
 
 - [alekhomenok/brand-voice-skill](https://github.com/alekhomenok/brand-voice-skill) - Brand-voice template with tone scales, vocabulary and channel-specific rules.
+- [Anbeeld/WRITING.md / writing](https://github.com/Anbeeld/WRITING.md/blob/main/skills/writing/SKILL.md) - Context-sensitive drafting, revision and audit rules for audience, medium, evidence and voice, with explicit edit boundaries and distinctions between errors, improvements and taste.
 - [bienhuuphuoc-dev/Intent-First-Copywriter](https://github.com/bienhuuphuoc-dev/Intent-First-Copywriter) - Copywriting workflow that preserves intent and learns voice from revisions.
+- [Calliope-Editor/writing-skills / line-editor](https://github.com/Calliope-Editor/writing-skills/blob/main/skills/editorial/line-editor/SKILL.md) - Fiction line-editing skill that diagnoses recurring issues in clarity, rhythm, narrative distance and voice with located evidence and revision directions, without rewriting sentences.
+- [Calliope-Editor/writing-skills / prose-rhythm](https://github.com/Calliope-Editor/writing-skills/blob/main/skills/craft/prose-rhythm/SKILL.md) - Prose-rhythm coaching skill with targeted exercises and feedback on variety, cadence, sound and pacing against the intended effect; does not write replacement prose.
 - [coreyhaines31/marketingskills / copy-editing](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/SKILL.md) - Sequential editing passes for marketing copy.
+- [Hmbown/taste / SKILL.md](https://github.com/Hmbown/taste/blob/main/SKILL.md) - Cross-domain creation and critique skill with writing guidance on reader purpose, exemplars, emphasis, restraint and choosing an appropriate form.
 - [jordannisbet/personal-brand-voice-skill](https://github.com/jordannisbet/personal-brand-voice-skill) - Voice-capture instructions for personal-brand writing.
+- [Mark-Life/agent-skills / writing-for-readers](https://github.com/Mark-Life/agent-skills/blob/main/skills/communication/writing-for-readers/SKILL.md) - Reader-focused prose skill with voice-preservation rules, examples of formulaic writing, and mechanical checks for paragraph rhythm, sentence variation and repeated structures.
 - [mcltyl/brand-voice-skills](https://github.com/mcltyl/brand-voice-skills) - Brand-voice profiles covering tone, vocabulary and writing style.
 - [moihars/brand-voice-skill](https://github.com/moihars/brand-voice-skill) - Fill-in brand-voice instructions for marketing formats.
+- [msimchowitz/writing-skills / general-writing](https://github.com/msimchowitz/writing-skills/blob/main/for-agents/general-writing/SKILL.md) - General editing and pattern-audit skill using a Humanizer-first workflow followed by house-style checks, with minimal edits and restoration of facts, qualifications and personal voice; credits Peter Yang.
+- [msimchowitz/writing-skills / writing-cadence](https://github.com/msimchowitz/writing-skills/blob/main/for-agents/writing-cadence/SKILL.md) - Cadence diagnosis and revision skill for choppy runs, repeated openings, clause patterns and weak endings; shapes rhythm around meaning instead of prescribed sentence-length variation.
+- [richtabor/agent-skills / red-pen](https://github.com/richtabor/agent-skills/blob/main/skills/red-pen/SKILL.md) - Editorial review skill for language, typography and recurring AI-associated patterns, with passage-specific explanations and suggested directions rather than a full rewrite.
+- [social-media-skills/skills / voice-builder](https://github.com/social-media-skills/skills/blob/main/skills/voice-builder/SKILL.md) - Extracts a reusable voice guide from actual writing samples across vocabulary, syntax, rhetoric, structure, stance and avoided patterns, then tests it on new material.
+- [social-media-skills/skills / writing-style-and-tone](https://github.com/social-media-skills/skills/blob/main/skills/writing-style-and-tone/SKILL.md) - Social-writing craft skill for tone changes, specificity, rhythm and editing passes; distinguishes voice from register and rejects invented anecdotes and detector-driven punctuation bans.
+- [vidanov/writing-craft-skill / SKILL.md](https://github.com/vidanov/writing-craft-skill/blob/main/SKILL.md) - Writing and editing skill combining concrete language, sentence rhythm, reader attention, voice calibration and an AI-pattern checklist.
 
 ## Specialist and house styles
 
@@ -145,6 +160,8 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [AnswerDotAI/skill-plugins](https://github.com/AnswerDotAI/skill-plugins/blob/main/plugins/codex-aai/skills/write-prose/SKILL.md) - Annotated plain/sloppy examples for documentation and explanatory prose; draws on the NousResearch anti-slop reference.
 - [anthropics/skills / doc-coauthoring](https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md) - Collaborative document drafting through context gathering, refinement and reader testing.
 - [anthropics/skills / internal-comms](https://github.com/anthropics/skills/blob/main/skills/internal-comms/SKILL.md) - Internal communication formats, including updates, reports and newsletters.
+- [Calliope-Editor/writing-skills / developmental-editor](https://github.com/Calliope-Editor/writing-skills/blob/main/skills/editorial/developmental-editor/SKILL.md) - Fiction manuscript assessment and developmental-edit skill for structure, pacing, character arc, stakes and causality, declaring genre-specific criteria and exceptions without rewriting prose.
+- [Calliope-Editor/writing-skills / workshop-critique](https://github.com/Calliope-Editor/writing-skills/blob/main/skills/critique/workshop-critique/SKILL.md) - Fiction workshop critique skill using distinct structural, character, stylistic and reader perspectives, preserving disagreements before synthesis; critiques without composing replacement prose.
 - [coreyhaines31/marketingskills / public-relations](https://github.com/coreyhaines31/marketingskills/blob/main/skills/public-relations/SKILL.md) - Press outreach, announcements and public-relations materials.
 - [junbolian/Academic-Humanizer](https://github.com/junbolian/Academic-Humanizer) - English and Chinese academic editing with checks for preservation of numbers, equations, citations and theorem statements.
 - [mdlamar/ASD-STE100](https://github.com/mdlamar/ASD-STE100) - Simplified Technical English skill and linter packaged for opencode; includes the author's reported experiments.
@@ -173,6 +190,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [FeedHive/ai-slop-detector](https://github.com/FeedHive/ai-slop-detector) - Catalog of writing patterns with explanations and rewrites, plus an agent skill and hosted checker.
 - [ilien-dev/quiron](https://github.com/ilien-dev/quiron) - Writing skill with local measurements against human-text baselines and register-specific checks.
 - [judetelan/ai-humanizer](https://github.com/judetelan/ai-humanizer/blob/main/SKILL.md) - JavaScript detector with lexical and rhythm checks, file audits and optional editor hooks.
+- [majesticlabs-dev/writing-eval / writing-eval](https://github.com/majesticlabs-dev/writing-eval/blob/master/skills/writing-eval/SKILL.md) - Skill for a local deterministic writing-analysis CLI, with style profiles, draft audits and corpus comparisons; distinguishes style alignment from overall writing quality.
 - [seyedehsanhadi/sloptrim](https://github.com/seyedehsanhadi/sloptrim) - Local Python detector for writing patterns in saved prose files; supports file-edit hooks.
 - [tbhb/vale-ai-tells](https://github.com/tbhb/vale-ai-tells) - Vale rules for AI-associated language patterns, aimed primarily at technical documentation.
 - [yanstd888/humanizer-lint](https://github.com/yanstd888/humanizer-lint) - Local prose and rhythm linter with language packs, targeting stock phrases and repetitive wording.
