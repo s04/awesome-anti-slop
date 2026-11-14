@@ -1,0 +1,3 @@
+[tasks.check]
+description = "Check whitespace, README links and section anchors"
+run = ["git diff --check", "python3 scripts/check.py"]
