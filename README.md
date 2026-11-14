@@ -1,31 +1,29 @@
 # Awesome Anti-Slop
 
-Skills, prompts, linters and research for cutting generic AI writing.
+A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts and more.
 
-The familiar stuff: staged revelations, five paragraphs that all sound alike, a joke explained after it lands, and a final sentence trying very hard to be a quote.
+106 resources. Alphabetical within each category. No rankings or recommendations.
 
-This collection starts with writing. It includes tools for English and other languages, technical documentation, academic work and personal voice. Entries link to their authors; no skill files are repackaged here.
+The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
-## Start here
-
-- [Peter Yang's no-ai-slop](https://github.com/petergyang/no-ai-slop/blob/main/skills/no-ai-slop/SKILL.md) for preserving personality while cutting canned rhetoric.
-- [blader's humanizer](https://github.com/blader/humanizer/blob/main/SKILL.md) for spotting staged openings, forced contrasts and unnecessary explanations.
-- [hannsxpeter's humanizer](https://github.com/hannsxpeter/humanizer/blob/main/SKILL.md) for working from a writing sample instead of a generic idea of “human.”
-- [vale-ai-tells](https://github.com/tbhb/vale-ai-tells) for repeatable checks in technical documentation.
-
-These are editorial starting points based on their instructions. This repository has not run a comparative benchmark or security audit. A lower pattern score does not establish better writing or tell you who wrote it.
+[catalog.json](catalog.json) contains source URLs, pinned Git revisions, checksums, inspection dates and repository license metadata. Descriptions reflect inspected entry files or documentation; inclusion does not claim tested effectiveness.
 
 ## Contents
 
-- [General writing skills](#general-writing-skills)
+- [Anti-slop writing](#anti-slop-writing)
+- [Copywriting and sales](#copywriting-and-sales)
+- [Blogs and articles](#blogs-and-articles)
+- [Email and newsletters](#email-and-newsletters)
+- [Social posts and scripts](#social-posts-and-scripts)
+- [Editing and voice](#editing-and-voice)
 - [Specialist and house styles](#specialist-and-house-styles)
 - [Languages](#languages)
 - [Linters and pattern checkers](#linters-and-pattern-checkers)
 - [Research and further reading](#research-and-further-reading)
-- [Overlap and choosing a skill](#overlap-and-choosing-a-skill)
+- [Collection and provenance](#collection-and-provenance)
 - [Contributing](#contributing)
 
-## General writing skills
+## Anti-slop writing
 
 - [Aboudjem/humanizer-skill](https://github.com/Aboudjem/humanizer-skill/blob/main/skills/humanizer/SKILL.md) - Pattern catalog with casual, professional, technical, warm and blunt voice profiles.
 - [adewale/anti-slop-writing](https://github.com/adewale/anti-slop-writing/blob/main/skills/anti-slop-writing/SKILL.md) - Edits inflated claims, canned emphasis and paragraph flow; asks whether the evidence earns the sentence.
@@ -34,14 +32,14 @@ These are editorial starting points based on their instructions. This repository
 - [blader/humanizer](https://github.com/blader/humanizer/blob/main/SKILL.md) - Edits staged openings, forced contrasts, repetitive closers and explanations of things the reader already knows.
 - [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) - Audit and rewrite skill with voice profiles, detect-only mode and a bundled detector.
 - [davidamitchell/Skills](https://github.com/davidamitchell/Skills/blob/main/remove-ai-slop/SKILL.md) - Checklist for filler, narrator distance, formulaic transitions and aphoristic endings.
-- [davidcogan/avoid-ai-writing](https://github.com/davidcogan/avoid-ai-writing/blob/main/SKILL.md) - Audits and rewrites prose while preserving claim boundaries and genre conventions. Its metadata credits Conor Bronsdon; compare the conorbronsdon project above.
+- [davidcogan/avoid-ai-writing](https://github.com/davidcogan/avoid-ai-writing/blob/main/SKILL.md) - Audits and rewrites prose while preserving claim boundaries and genre conventions. Its metadata credits Conor Bronsdon.
 - [eskayML/anti-slop](https://github.com/eskayML/anti-slop/blob/main/SKILL.md) - Register matching and a validator. Also imposes strict punctuation rules, including one comma per sentence.
-- [firemonster612/human-writing-skill](https://github.com/firemonster612/human-writing-skill/blob/main/skills/human-writing/SKILL.md) - Vocabulary, sentence rhythm and register rules with a self-audit. Claimed research support has not been independently checked here.
+- [firemonster612/human-writing-skill](https://github.com/firemonster612/human-writing-skill/blob/main/skills/human-writing/SKILL.md) - Vocabulary, sentence rhythm and register rules with a self-audit and research references.
 - [hannsxpeter/humanizer](https://github.com/hannsxpeter/humanizer/blob/main/SKILL.md) - Matches a supplied writing sample before removing recurring patterns. Includes checks against over-editing.
-- [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop/blob/main/SKILL.md) - Compact rules against filler, formulaic structures and manufactured punchlines. Its blanket adverb and passive-voice bans need editorial judgment.
-- [harshaneel/humanize](https://github.com/harshaneel/humanize) - Two writing skills with reference material on making prose more natural and relatable; research claims are the project's own.
+- [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop/blob/main/SKILL.md) - Rules against filler, formulaic structures and manufactured punchlines, including bans on adverbs and passive voice.
+- [harshaneel/humanize](https://github.com/harshaneel/humanize) - Two writing skills with reference material on prose style and research citations.
 - [henders23/humaniser](https://github.com/henders23/humaniser/blob/main/SKILL.md) - Voice calibration and repository-wide prose audits. Credits blader, hardikpandya and brandonwise.
-- [iizcm/stop-slop-skill](https://github.com/iizcm/stop-slop-skill/blob/main/SKILL.md) - Short, strict checklist that bans several ordinary constructions, including sentence-initial “So.” Included for comparison.
+- [iizcm/stop-slop-skill](https://github.com/iizcm/stop-slop-skill/blob/main/SKILL.md) - A short checklist with vocabulary, punctuation and sentence-structure restrictions.
 - [immeasurablematt/a16z-anti-slop](https://github.com/immeasurablematt/a16z-anti-slop) - Editing skill adapted from an a16z crypto article; starts with what the writing needs to accomplish.
 - [impactcrew/dont-be-a-sloperator](https://github.com/impactcrew/dont-be-a-sloperator) - Principle-based instructions for reducing generic copy and empty claims.
 - [jalaalrd/anti-ai-slop-writing](https://github.com/jalaalrd/anti-ai-slop-writing) - Constraint-based writing skill covering stock vocabulary, sentence shapes and formatting.
@@ -49,24 +47,84 @@ These are editorial starting points based on their instructions. This repository
 - [kjmagnan1s/anti-slop](https://github.com/kjmagnan1s/anti-slop/blob/main/SKILL.md) - Consolidates several predecessors, with voice protection, correction intake and a separate completeness review.
 - [madebybeings/human-copywriting-skill](https://github.com/madebybeings/human-copywriting-skill) - Writing and editing skill that prioritizes what to say and how much to explain before word choice.
 - [MariusAure/anti-slop-writing](https://github.com/MariusAure/anti-slop-writing) - Single diagnostic-and-revision prompt that considers audience, evidence and genre before rewriting.
-- [misbahsy/anti-ai-slop](https://github.com/misbahsy/anti-ai-slop/blob/main/skills/anti-ai-slop/SKILL.md) - Rewrite workflow with a Python linter and a separate reviewer. Its assurance claims are not independent evidence of effectiveness.
+- [misbahsy/anti-ai-slop](https://github.com/misbahsy/anti-ai-slop/blob/main/skills/anti-ai-slop/SKILL.md) - Rewrite workflow with a Python linter and a separate reviewer.
 - [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop/blob/main/skills/no-ai-slop/SKILL.md) - Preserves bluntness, humor and useful digressions; calls for deleting fake-profound endings rather than polishing them.
 - [SalZaki/antislop](https://github.com/SalZaki/antislop/blob/main/skills/remove-ai-slop/SKILL.md) - Conservative edits with register preservation and user vocabulary overrides; prefers cutting padding to rewriting everything.
 - [shir-danishyar/humanize](https://github.com/shir-danishyar/humanize) - Writing and revision skill with register awareness, voice calibration and a Python linter.
 - [sineminflux/no-ai-slop](https://github.com/sineminflux/no-ai-slop/blob/main/SKILL.md) - Compact writing rules, a separate final check and an explicit exception for the author's own voice.
 - [westonhancock/unslop](https://github.com/westonhancock/unslop/blob/main/SKILL.md) - Emphasizes minimal edits and protecting the writer's uneven rhythm, vocabulary and personal traits.
 
+## Copywriting and sales
+
+- [coleschaffer/dtc-copywriting-skills](https://github.com/coleschaffer/dtc-copywriting-skills) - A direct-to-consumer copywriting bundle based on research, mechanism, brief and copy workflows.
+- [coreyhaines31/marketingskills / ad-creative](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/SKILL.md) - Ad-copy variants and creative iteration.
+- [coreyhaines31/marketingskills / copywriting](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md) - Website and landing-page copy, including headlines, benefits and calls to action.
+- [cyrwheelninja/copywriting-skill](https://github.com/cyrwheelninja/copywriting-skill) - Copywriting frameworks, editing prompts and AI-pattern checks.
+- [forint573/human-copywrite](https://github.com/forint573/human-copywrite) - Marketing and long-form copy skill covering brand voice, factual preservation and removal of drafting residue.
+- [Gonzih/skills-copywriting](https://github.com/Gonzih/skills-copywriting) - Copywriting skills packaged for Claude Code.
+- [hellozacphua/longform-sales-page-copywriting](https://github.com/hellozacphua/longform-sales-page-copywriting) - Traditional Chinese sales-page workflow linking product claims to evidence before drafting; discusses AIDA without requiring a fixed structure.
+- [igoroliveirg/claude-copy](https://github.com/igoroliveirg/claude-copy) - Direct-response skills for headlines, leads, offers and email sequences.
+- [judicael-s/Copywriting-skill](https://github.com/judicael-s/Copywriting-skill) - A copywriting library with SEO, French, social and career-writing workflows.
+- [RamaAditya49/rama-copywriting](https://github.com/RamaAditya49/rama-copywriting) - Indonesian and English copywriting skill.
+- [robpalmer99/claude-code-copywriting-skills](https://github.com/robpalmer99/claude-code-copywriting-skills) - A collection of direct-response copywriting skills.
+- [yerdaulet-damir/redpen](https://github.com/yerdaulet-damir/redpen) - Copywriting checks for concrete, falsifiable and subject-specific claims.
+- [Zzzeen2552/copywriting-mastery-skill](https://github.com/Zzzeen2552/copywriting-mastery-skill) - Copywriting instructions organized around named copywriters and their methods.
+
+## Blogs and articles
+
+- [ComposioHQ/awesome-claude-skills / content-research-writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md) - Research, citations, outlines and section-by-section feedback for written content.
+- [coreyhaines31/marketingskills / content-strategy](https://github.com/coreyhaines31/marketingskills/blob/main/skills/content-strategy/SKILL.md) - Content planning, topic selection and editorial priorities.
+- [danielabar/meblog / blog-editor](https://github.com/danielabar/meblog/blob/master/.claude/skills/blog-editor/SKILL.md) - A personal blog-editing workflow covering prose, technical accuracy and publication metadata.
+- [pedronauck/skills / writing-tech-post](https://github.com/pedronauck/skills/blob/main/skills/mine/writing-tech-post/SKILL.md) - Engineering articles with genre-specific references for postmortems, migrations, performance work and tutorials.
+- [RealAdarsh/skills / technical-blog-writing](https://github.com/RealAdarsh/skills/blob/main/skills/technical-blog-writing/SKILL.md) - Technical blog-writing instructions.
+- [sjmoran/claude-blog-prose / blog-prose](https://github.com/sjmoran/claude-blog-prose/blob/master/skills/blog-prose/SKILL.md) - Rules for writing and reviewing blog posts, devlogs, tutorials and opinion pieces.
+- [tamirdresher/squad-skills / blog-writing](https://github.com/tamirdresher/squad-skills/blob/main/plugins/blog-writing/SKILL.md) - Technical blogging conventions for narrative, code examples and post series.
+- [tuananhbui89/skills / research-blog-writer](https://github.com/tuananhbui89/skills/blob/main/research-blog-writer/SKILL.md) - Research-backed technical blog posts with citations and layered explanations.
+
+## Email and newsletters
+
+- [amanattar/email-drafter](https://github.com/amanattar/email-drafter/blob/master/SKILL.md) - Business email composition for follow-ups, difficult conversations and other workplace messages.
+- [AMishradev/outbound-writing](https://github.com/AMishradev/outbound-writing) - Cold-email writing skill that gathers concrete facts before drafting and reviews repetitive AI phrasing.
+- [analystacademy/claude-skills / email](https://github.com/analystacademy/claude-skills/blob/main/email/SKILL.md) - Email drafting from a user-supplied voice profile and examples of sent messages.
+- [coreyhaines31/marketingskills / cold-email](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/SKILL.md) - Cold outreach messages and follow-up sequences.
+- [coreyhaines31/marketingskills / emails](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/SKILL.md) - Lifecycle email campaigns and sequences.
+- [julienmarie/ecommerce-newsletter-skill](https://github.com/julienmarie/ecommerce-newsletter-skill) - Generator for brand-specific ecommerce newsletter skills.
+- [kausshikkulkarnni/cold-email-copywriting-skill](https://github.com/kausshikkulkarnni/cold-email-copywriting-skill) - Cold-email copywriting instructions for business-to-business campaigns.
+- [kennethhutw/newsletter-skill](https://github.com/kennethhutw/newsletter-skill) - Configurable industry-newsletter workflow with source collection and Markdown/HTML drafts.
+- [kvamseek/newsletter-skill](https://github.com/kvamseek/newsletter-skill) - Weekly newsletter-building skill for Copilot CLI.
+- [lucaslinares1/gtm-skills / email-writer](https://github.com/lucaslinares1/gtm-skills/blob/main/skills/email-writer/SKILL.md) - Email-writing rules using existing go-to-market context.
+- [oleksandrabovkun/claude-newsletter-skill](https://github.com/oleksandrabovkun/claude-newsletter-skill) - Weekly team-newsletter drafting and publishing workflow.
+- [promptmetrics/newsletter-skill](https://github.com/promptmetrics/newsletter-skill) - Newsletter brief-to-email workflow for Loops, including previews and approval steps.
+- [seventux/newsletter-skills](https://github.com/seventux/newsletter-skills) - A collection of skills for newsletter operators.
+- [ynu29/climate-newsletter-skill](https://github.com/ynu29/climate-newsletter-skill) - Korean climate-policy and research newsletter workflow producing HTML and DOCX issues.
+
+## Social posts and scripts
+
+- [coreyhaines31/marketingskills / social](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/SKILL.md) - Platform-specific social content and repurposing.
+- [tenfoldmarc/brand-voice-skill](https://github.com/tenfoldmarc/brand-voice-skill) - Uses Instagram reel transcripts as material for writing scripts in a supplied voice.
+
+## Editing and voice
+
+- [alekhomenok/brand-voice-skill](https://github.com/alekhomenok/brand-voice-skill) - Brand-voice template with tone scales, vocabulary and channel-specific rules.
+- [bienhuuphuoc-dev/Intent-First-Copywriter](https://github.com/bienhuuphuoc-dev/Intent-First-Copywriter) - Copywriting workflow that preserves intent and learns voice from revisions.
+- [coreyhaines31/marketingskills / copy-editing](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/SKILL.md) - Sequential editing passes for marketing copy.
+- [jordannisbet/personal-brand-voice-skill](https://github.com/jordannisbet/personal-brand-voice-skill) - Voice-capture instructions for personal-brand writing.
+- [mcltyl/brand-voice-skills](https://github.com/mcltyl/brand-voice-skills) - Brand-voice profiles covering tone, vocabulary and writing style.
+- [moihars/brand-voice-skill](https://github.com/moihars/brand-voice-skill) - Fill-in brand-voice instructions for marketing formats.
+
 ## Specialist and house styles
 
 - [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) - Editing guidance for papers and grant proposals, with attention to scholarly voice and evidence.
-- [AMishradev/outbound-writing](https://github.com/AMishradev/outbound-writing) - Cold-email writing skill that gathers concrete facts before drafting and reviews repetitive AI phrasing.
 - [AnswerDotAI/skill-plugins](https://github.com/AnswerDotAI/skill-plugins/blob/main/plugins/codex-aai/skills/write-prose/SKILL.md) - Annotated plain/sloppy examples for documentation and explanatory prose; draws on the NousResearch anti-slop reference.
-- [forint573/human-copywrite](https://github.com/forint573/human-copywrite) - Marketing and long-form copy skill covering brand voice, factual preservation and removal of drafting residue.
+- [anthropics/skills / doc-coauthoring](https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md) - Collaborative document drafting through context gathering, refinement and reader testing.
+- [anthropics/skills / internal-comms](https://github.com/anthropics/skills/blob/main/skills/internal-comms/SKILL.md) - Internal communication formats, including updates, reports and newsletters.
+- [coreyhaines31/marketingskills / public-relations](https://github.com/coreyhaines31/marketingskills/blob/main/skills/public-relations/SKILL.md) - Press outreach, announcements and public-relations materials.
 - [junbolian/Academic-Humanizer](https://github.com/junbolian/Academic-Humanizer) - English and Chinese academic editing with checks for preservation of numbers, equations, citations and theorem statements.
 - [mdlamar/ASD-STE100](https://github.com/mdlamar/ASD-STE100) - Simplified Technical English skill and linter packaged for opencode; includes the author's reported experiments.
 - [realrossmanngroup/no_ai_slop_writing_rules](https://github.com/realrossmanngroup/no_ai_slop_writing_rules) - An example of a specific author's house style: Louis Rossmann's writing rules and skills.
 - [rookslog/stylewright](https://github.com/rookslog/stylewright) - Writing skills tied to named style standards, with a companion linter.
 - [stephenturner/skill-deslop](https://github.com/stephenturner/skill-deslop) - Prose editing skill with examples weighted toward scientific writing and technical blog posts.
+- [teejayfamo/ux-copywriting-skill](https://github.com/teejayfamo/ux-copywriting-skill) - User-interface copywriting guidance for AI assistants and coding agents.
 
 ## Languages
 
@@ -99,34 +157,27 @@ These are editorial starting points based on their instructions. This repository
 - [NousResearch/autonovel](https://github.com/NousResearch/autonovel/blob/master/ANTI-SLOP.md) - A prose-pattern reference inside the autonovel project; also used by AnswerDotAI's writing skill.
 - [sam-paech/auto-antislop](https://github.com/sam-paech/auto-antislop) - Pipeline for measuring model-specific overused phrases, generating preference data and fine-tuning a model.
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) - Editorial pattern guide cited by many of these skills. Patterns are clues to inspect, not proof of authorship.
-- [zhuyansen/awesome-humanizer-skills](https://github.com/zhuyansen/awesome-humanizer-skills) - A broader directory spanning writing, code and UI, with its own testing and security labels. Useful for further discovery.
+- [zhuyansen/awesome-humanizer-skills](https://github.com/zhuyansen/awesome-humanizer-skills) - A directory spanning writing, code and UI, with published testing and security assessments.
 
-## Overlap and choosing a skill
+## Collection and provenance
 
-Many entries share ancestors. Humanizer variants often draw from Wikipedia and blader/humanizer. Stop Slop variants reuse Hardik Pandya's rules. Some projects combine both. The annotations identify relationships stated in the inspected sources; they are not a complete genealogy.
+The catalog includes individual skills, multi-skill repositories, prompts, linters and research. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
 
-Read the instructions before choosing one. Some protect the author's slang and punctuation; others prohibit ordinary constructions. A rule that helps a technical manual may wreck a casual post. Give the skill a sample of the voice you want and check whether the rewrite still sounds like that person.
+Related projects can share rules, translations or source material. Their entries remain distinct. `related_sources` records relationships stated in inspected sources; it is not a complete genealogy. A GitHub fork flag alone would miss adaptations copied into separate repositories.
 
-Try one at a time. Compare the original and revised text for meaning, missing details and unwanted changes of tone. Installing several overlapping rule sets does not give you several independent editors.
+GitHub sources have a pinned revision and a SHA-256 checksum of the retrieved entry file. A non-Git source has a retrieval date and checksum without a revision pin. These records identify what was retrieved; they do not certify a complete review of every referenced file or bundled skill.
+
+License fields come from GitHub's repository metadata. A missing value means no license was detected there. File-specific terms and dependencies still need inspection before an amalgamation incorporates upstream text. This collection links to source material without republishing it.
+
+Discovery has included GitHub and web searches, [Awesome Humanizer Skills](https://github.com/zhuyansen/awesome-humanizer-skills) and the [AI Writing Skill Field Guide](https://github.com/Daguilar0123/ai-writing-skill-field-guide). Their rankings and assessments are not adopted here.
 
 ## Contributing
 
-Add a resource through a pull request, or open an issue with its source URL.
+Open an issue with a source URL, or add a record to `catalog.json` in a pull request. Include the author, category, a neutral description, inspected source URL, revision where available, checksum, inspection date and license metadata. For an adaptation, record its stated sources. Do not add rankings, endorsements or performance claims without attribution.
 
-Run `mise run check` (or `python3 scripts/check.py`) to check links and section anchors before submitting a change. The link check makes public HTTP requests; it does not install or run any listed tool.
+Scope includes writing, editing, research for writing, voice, scripts, correspondence and content planning across languages. General-purpose apps and code/UI-only cleanup tools are outside this collection; interface writing is in scope.
 
-- Link to the author's repository, skill file or original guide.
-- Put it in the closest section, alphabetically by owner and project name.
-- Describe what it does in one or two sentences. Name the language or writing context when relevant.
-- For an adaptation, name the upstream project and explain the useful difference. Repackaging alone does not need another entry.
-- Check that the destination exists and the description matches its current contents.
-- Attribute benchmark results to their authors. Avoid untested “best,” “undetectable” or security claims.
-
-Scope: resources that help people identify, prevent or edit generic AI prose. General-purpose writing apps and code/UI-only cleanup tools are outside the current collection. Broader directories are linked under further reading.
-
-The initial collection was checked on 14 November 2026. It contains 61 resources and is open to additions. Source inspection confirms what a project documents, not that every advertised feature works.
-
-Discovery included GitHub search, [Awesome Humanizer Skills](https://github.com/zhuyansen/awesome-humanizer-skills) and the [AI Writing Skill Field Guide](https://github.com/Daguilar0123/ai-writing-skill-field-guide). Descriptions here were written from the linked primary sources; those collections' rankings and security labels are not adopted here.
+Run `python3 scripts/render.py` after editing the catalog, then `mise run check`. The checks validate catalog records, README freshness, whitespace, links and section anchors. They make public HTTP requests but do not install or execute any collected skill.
 
 ## License
 

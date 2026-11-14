@@ -1,3 +1,3 @@
 [tasks.check]
-description = "Check whitespace, README links and section anchors"
-run = ["git diff --check", "python3 scripts/check.py"]
+description = "Validate catalog, generated README, whitespace and links"
+run = ["git diff --check", "python3 scripts/render.py --check", "python3 scripts/check.py"]
