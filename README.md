@@ -1,12 +1,12 @@
 # Awesome Anti-Slop
 
-A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts, UGC and video scripts.
+A collection of writing skills, prompts, linters, guides, books, blogs, newsletters and courses: anti-slop editing, copywriting, prose craft, email, social posts, UGC and video scripts.
 
-143 resources. Alphabetical within each category. No rankings or recommendations.
+183 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
-[catalog.json](catalog.json) contains source URLs, pinned Git revisions, checksums, inspection dates and repository license metadata. Descriptions reflect inspected entry files or documentation; inclusion does not claim tested effectiveness.
+[catalog.json](catalog.json) contains source URLs, pinned Git revisions, checksums, inspection dates and license metadata. Reading and course entries also record authors, access type and inspection scope. Descriptions reflect inspected entry files or public documentation; inclusion does not claim tested effectiveness.
 
 ## Contents
 
@@ -21,6 +21,10 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Specialist and house styles](#specialist-and-house-styles)
 - [Languages](#languages)
 - [Linters and pattern checkers](#linters-and-pattern-checkers)
+- [Writing guides and essays](#writing-guides-and-essays)
+- [Books on writing](#books-on-writing)
+- [Blogs and newsletters](#blogs-and-newsletters)
+- [Courses and practice](#courses-and-practice)
 - [Research and further reading](#research-and-further-reading)
 - [Collection and provenance](#collection-and-provenance)
 - [Contributing](#contributing)
@@ -195,6 +199,58 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [tbhb/vale-ai-tells](https://github.com/tbhb/vale-ai-tells) - Vale rules for AI-associated language patterns, aimed primarily at technical documentation.
 - [yanstd888/humanizer-lint](https://github.com/yanstd888/humanizer-lint) - Local prose and rhythm linter with language packs, targeting stock phrases and repetitive wording.
 
+## Writing guides and essays
+
+- [George Orwell: Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) - Free essay on stale imagery, imprecise language, political euphemism and thinking through meaning before choosing words; hosted by the Orwell Foundation.
+- [Google: Technical Writing](https://developers.google.com/tech-writing) - Free technical-writing lessons and facilitator resources for engineers, including document planning, accessibility and helpful error messages.
+- [Gopen and Swan: The Science of Scientific Writing](https://georgegopen.com/scientific-writing-articles/) - Free author resource page linking the scientific-writing article and PDF, focused on sentence structure and reader expectations; the resource page was inspected.
+- [Julian Shapiro: Writing Handbook](https://www.julian.com/guide/write/intro) - Free nonfiction-writing handbook covering ideas, first drafts, rewriting, style and practice; the introductory chapter was inspected.
+- [Mailchimp: Content Style Guide](https://styleguide.mailchimp.com/) - Free house-style guide covering voice and tone, mechanics, newsletters, social posts, accessibility and translation; published under CC BY-NC 4.0.
+- [Microsoft: Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) - Free technology-writing reference covering voice, terminology, inclusive language and communication across apps, websites and documents.
+- [Paul Graham: Taste for Makers](https://www.paulgraham.com/taste.html) - Free essay on cultivating judgment through simplicity, constraints, examples and revision across creative disciplines; broader than prose writing.
+- [Paul Graham: Write Simply](https://www.paulgraham.com/simply.html) - Free essay arguing for ordinary words and straightforward sentences, while allowing deliberate complexity for effect.
+- [Paul Graham: Writing, Briefly](https://www.paulgraham.com/writing44.html) - Free essay on drafting, cutting, conversational language, reader feedback and revision as a way to develop ideas.
+- [Purdue OWL: Conciseness](https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html) - Free writing-center guidance on concise prose, choosing effective words and removing unnecessary language.
+- [UNC Writing Center: Revising Drafts](https://writingcenter.unc.edu/tips-and-tools/revising-drafts/) - Free guide distinguishing substantive revision from proofreading, with questions about purpose, argument, organization and reader needs.
+
+## Books on writing
+
+- [Ann Handley: Everybody Writes](https://annhandley.com/books/) - Paid guide to commercial writing, content creation and storytelling for people and brands. Author-site description inspected; full book not reviewed.
+- [Anne Lamott: Bird by Bird](https://www.penguinrandomhouse.com/books/97395/bird-by-bird-by-anne-lamott/9780307424983/) - Paid book on writing practice, creative obstacles and approaching work in manageable steps. Publisher description inspected; full book not reviewed.
+- [Benjamin Dreyer: Dreyer's English](https://www.penguinrandomhouse.com/books/232363/dreyers-english-by-benjamin-dreyer/) - Paid guide to copyediting, grammar, punctuation and clearer prose from a publishing editor. Publisher description inspected; full book not reviewed.
+- [David Ogilvy: Ogilvy on Advertising](https://www.penguinrandomhouse.com/books/124131/ogilvy-on-advertising-by-david-ogilvy/9780804170055/) - Paid advertising book covering effective advertising, copy, campaigns and the agency business. Publisher description inspected; full book not reviewed.
+- [Gary Provost: 100 Ways to Improve Your Writing](https://www.penguinrandomhouse.com/books/602155/100-ways-to-improve-your-writing-updated-by-gary-provost/) - Paid practical writing guide with examples on grammar, punctuation, topic sentences, titles and writing obstacles. Publisher description inspected; full book not reviewed.
+- [Joseph Sugarman: The Adweek Copywriting Handbook](https://www.wiley.com/en-us/shop/general-introductory-business-management/the-adweek-copywriting-handbook-the-ultimate-guide-to-writing-powerful-advertising-and-marketing-copy-from-one-of-america%27s-top-copywriters-p-9781118428795) - Paid advertising and marketing-copy handbook, with publisher-provided contents and an excerpt. Publisher description inspected; full book not reviewed.
+- [Roy Peter Clark: Writing Tools](https://www.hachettebookgroup.com/titles/roy-peter-clark/writing-tools/9780316028400/) - Paid collection of writing strategies illustrated with journalism and literature, covering sentence craft, story structure and habits. Publisher description inspected; full book not reviewed.
+- [Stephen King: On Writing](https://stephenking.com/works/nonfiction/on-writing-a-memoir-of-the-craft.html) - Paid memoir and writing-craft book combining the author's development with tools and habits of writing. Author description inspected; full book not reviewed.
+- [Steven Pinker: The Sense of Style](https://www.penguin.co.uk/books/183573/the-sense-of-style-by-pinker-steven/9780241957714) - Paid style and usage guide approaching clarity and coherence through linguistics and cognitive science. Publisher description inspected; full book not reviewed.
+- [Ursula K. Le Guin: Steering the Craft](https://www.ursulakleguin.com/steering-the-craft) - Paid narrative-craft handbook covering language sound, sentences and point of view, with examples and exercises. Author-site description inspected; full book not reviewed.
+- [Verlyn Klinkenborg: Several Short Sentences About Writing](https://penguinrandomhouselibrary.com/book/?isbn=9780307279415) - Paid book on sentence-making, noticing and reconsidering assumptions about the writing process. Publisher description inspected; full book not reviewed.
+- [William Strunk Jr.: The Elements of Style (original edition)](https://www.gutenberg.org/ebooks/37134) - Free original Strunk edition via Project Gutenberg, covering usage and composition; distinct from later Strunk and White revisions. Download listing inspected, not the complete text.
+- [William Zinsser: On Writing Well](https://play.google.com/store/books/details?id=mp16BDRDaYQC) - Paid nonfiction-writing book covering clear prose across subjects and genres. Linked retailer description inspected; full book not reviewed, and purchase availability varies by region.
+
+## Blogs and newsletters
+
+- [Ann Handley: Total Annarchy](https://annhandley.com/newsletter/) - Free newsletter combining stories, writing advice and marketing observations; useful as both teaching material and a source of published voice examples.
+- [Austin Kleon: Newsletter](https://austinkleon.substack.com/about) - Free Friday newsletter of writing, art and creative references, with paid Tuesday letters and archive access. Public about page inspected; paid posts not reviewed.
+- [Copyblogger: Blog](https://copyblogger.com/blog/) - Free articles on copywriting, content marketing, audience development and freelance writing; separate coaching and academy products are paid.
+- [Copyhackers: Copywriting Blog](https://copyhackers.com/blog/) - Free blog with conversion-copywriting case studies, formulas, research, email and website guidance; separate training products are paid.
+- [David Perell: Essays](https://perell.com/essays/) - Free short and long essays on writing, business, education and internet culture, including writing-online and imitation essays; an example corpus rather than a single ruleset.
+- [Eddie Shleyner: VeryGoodCopy](https://www.verygoodcopy.com/) - Free newsletter and short lessons on copywriting, creativity and storytelling, with interviews and practice resources; separate paid training is also offered.
+- [George Saunders: Story Club](https://georgesaunders.substack.com/about) - Newsletter on close reading, fiction craft, exercises and reader questions, with free and paid subscriptions. Public about page inspected; paid posts not reviewed.
+- [Harry Dry: Marketing Examples Copywriting](https://marketingexamples.com/copywriting) - Free copywriting examples and breakdowns covering conversational language, headlines, customer language and advertising; the site also offers a free newsletter.
+- [Jane Friedman: Blog](https://janefriedman.com/blog/) - Mixed-access article archive covering fiction and nonfiction craft, revision, editors and publishing, with explicit free and premium filters.
+- [Matt Levine: Money Stuff](https://mattlevine.co/work) - Finance newsletter and column archive linked from the author's site, collected as published writing examples rather than writing instruction. Bloomberg access conditions vary; author index inspected, not the full archive.
+- [Nicolas Cole: The Art and Business of Writing](https://artandbiz.substack.com/about) - Free essays on digital writing and its business, with paid exercises, breakdowns and masterclasses. Public about page inspected; paid material not reviewed.
+- [Nieman Storyboard](https://niemanstoryboard.org/) - Free narrative-journalism resource with story annotations, craft guides, writer interviews and a newsletter; connects real passages to reporting and structural decisions.
+- [Poynter: Writing Tools Archive](https://www.poynter.org/tag/writing-tools/) - Free archive of writing and editing articles, including Roy Peter Clark's craft guidance and discussions of reporting, language and narrative.
+- [The Paris Review: The Art of Fiction and Other Interviews](https://www.theparisreview.org/interviews) - Mixed-access interview archive on writers' methods, revision and artistic decisions, organized by author and decade. Public index inspected; not every interview reviewed.
+
+## Courses and practice
+
+- [Sam and Sara Parr: CopyThat](https://copythat.com/) - Paid copywork course built around studying and handwriting selected sales letters with explanatory commentary. Public course introduction inspected; paid lessons not reviewed.
+- [Shaan Puri: Power Writing](https://maven.com/generalist/writing) - Former paid course on emails, landing pages, headlines and persuasive communication. Maven currently marks it no longer available; public syllabus inspected, not course lessons.
+
 ## Research and further reading
 
 - [Daguilar0123/ai-writing-skill-field-guide](https://github.com/Daguilar0123/ai-writing-skill-field-guide) - Survey of writing skills with maintenance analysis and published evaluation material. Results belong to its authors.
@@ -206,13 +262,15 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 ## Collection and provenance
 
-The catalog includes individual skills, multi-skill repositories, prompts, linters and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
+The catalog includes individual skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
+
+Reading entries distinguish free resources, paid books and courses, and mixed-access publications. Free access is not permission to republish or adapt. A book description, course syllabus or archive index is recorded as such, not as a full review of the underlying material. Newsletter and columnist entries may supply examples for later style analysis; they are not automatically writing instruction. No paid material was purchased or unlocked to build this collection.
 
 Related projects can share rules, translations or source material. Their entries remain distinct. `related_sources` records relationships stated in inspected sources; it is not a complete genealogy. A GitHub fork flag alone would miss adaptations copied into separate repositories.
 
 GitHub sources have a pinned revision and a SHA-256 checksum of the retrieved entry file. A non-Git source has a retrieval date and checksum without a revision pin. These records identify what was retrieved; they do not certify a complete review of every referenced file or bundled skill.
 
-License fields come from GitHub's repository metadata. A missing value means no license was detected there. File-specific terms and dependencies still need inspection before an amalgamation incorporates upstream text. This collection links to source material without republishing it.
+GitHub license fields come from repository metadata; other entries state their license basis separately. A missing value means no license was recorded, not that the material is free to reuse. File-specific terms and dependencies still need inspection before an amalgamation incorporates upstream text. This collection links to source material without republishing it.
 
 Discovery has included GitHub and web searches, [Awesome Humanizer Skills](https://github.com/zhuyansen/awesome-humanizer-skills) and the [AI Writing Skill Field Guide](https://github.com/Daguilar0123/ai-writing-skill-field-guide). Their rankings and assessments are not adopted here.
 
@@ -220,7 +278,7 @@ Discovery has included GitHub and web searches, [Awesome Humanizer Skills](https
 
 Open an issue with a source URL, or add a record to `catalog.json` in a pull request. Include the author, category, a neutral description, inspected source URL, revision where available, checksum, inspection date and license metadata. For an adaptation, record its stated sources. Do not add rankings, endorsements or performance claims without attribution.
 
-Scope includes writing, editing, research for writing, voice, scripts, correspondence and content planning across languages. General-purpose apps and code/UI-only cleanup tools are outside this collection; interface writing is in scope.
+Scope includes writing, editing, research for writing, voice, scripts, correspondence, content planning and published writing examples across languages. Books and courses may be included through public descriptions, with access and inspection scope stated. General-purpose apps and code/UI-only cleanup tools are outside this collection; interface writing is in scope.
 
 Run `python3 scripts/render.py` after editing the catalog, then `mise run check`. The checks validate catalog records, README freshness, whitespace, links and section anchors. They make public HTTP requests but do not install or execute any collected skill.
 
