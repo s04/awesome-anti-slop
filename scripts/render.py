@@ -12,6 +12,8 @@ CATEGORIES = [
     "Blogs and articles",
     "Email and newsletters",
     "Social posts and scripts",
+    "UGC and video scripting",
+    "Video platform workflows",
     "Editing and voice",
     "Specialist and house styles",
     "Languages",
@@ -47,7 +49,7 @@ def render(entries):
     lines = [
         "# Awesome Anti-Slop",
         "",
-        "A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts and more.",
+        "A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts, UGC and video scripts.",
         "",
         f"{len(entries)} resources. Alphabetical within each category. No rankings or recommendations.",
         "",
@@ -73,7 +75,7 @@ def render(entries):
     lines += [
         "## Collection and provenance",
         "",
-        "The catalog includes individual skills, multi-skill repositories, prompts, linters and research. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
+        "The catalog includes individual skills, multi-skill repositories, prompts, linters and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
         "",
         "Related projects can share rules, translations or source material. Their entries remain distinct. `related_sources` records relationships stated in inspected sources; it is not a complete genealogy. A GitHub fork flag alone would miss adaptations copied into separate repositories.",
         "",

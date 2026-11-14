@@ -1,8 +1,8 @@
 # Awesome Anti-Slop
 
-A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts and more.
+A collection of writing skills, prompts, linters and research: anti-slop editing, copywriting, blogs, email, newsletters, social posts, UGC and video scripts.
 
-106 resources. Alphabetical within each category. No rankings or recommendations.
+125 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
@@ -15,6 +15,8 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Blogs and articles](#blogs-and-articles)
 - [Email and newsletters](#email-and-newsletters)
 - [Social posts and scripts](#social-posts-and-scripts)
+- [UGC and video scripting](#ugc-and-video-scripting)
+- [Video platform workflows](#video-platform-workflows)
 - [Editing and voice](#editing-and-voice)
 - [Specialist and house styles](#specialist-and-house-styles)
 - [Languages](#languages)
@@ -103,6 +105,31 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [coreyhaines31/marketingskills / social](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/SKILL.md) - Platform-specific social content and repurposing.
 - [tenfoldmarc/brand-voice-skill](https://github.com/tenfoldmarc/brand-voice-skill) - Uses Instagram reel transcripts as material for writing scripts in a supplied voice.
 
+## UGC and video scripting
+
+- [0xAnni/ugc-creator / SKILL.md](https://github.com/0xAnni/ugc-creator/blob/main/SKILL.md) - Community skill for recurring synthetic creators, character identity records and image/video prompts, including a Kling animation workflow.
+- [Advibly/skills / ugc-ads](https://github.com/Advibly/skills/blob/main/ugc-ads/SKILL.md) - Advibly-published skill for a five-shot direct-response script, creator image, storyboard and assembled vertical ad through its MCP tools.
+- [Bomx/super-video-maker-skill / HOOK_PLAYBOOK_ARTICLE_SPRINT.md](https://github.com/Bomx/super-video-maker-skill/blob/main/HOOK_PLAYBOOK_ARTICLE_SPRINT.md) - Community hook and script playbook for article-based short videos, with word budgets, evidence shots and format-specific voiceover rules.
+- [Bomx/super-video-maker-skill / SKILL.md](https://github.com/Bomx/super-video-maker-skill/blob/main/SKILL.md) - Community production skill covering UGC ads, avatar explainers and video repurposing, with separate copy, spoken-voice and hook playbooks.
+- [Bomx/super-video-maker-skill / SPOKEN_VO_HUMANIZER.md](https://github.com/Bomx/super-video-maker-skill/blob/main/SPOKEN_VO_HUMANIZER.md) - Community spoken-voice editing reference with sentence rhythm, contractions, connected thoughts and examples of artificial-sounding speech.
+- [Bomx/super-video-maker-skill / VIDEO_COPY_PLAYBOOK.md](https://github.com/Bomx/super-video-maker-skill/blob/main/VIDEO_COPY_PLAYBOOK.md) - Community video-copy playbook separating spoken argument from visual evidence, with script structure, credibility checks and revisions.
+- [fal-ai-community/skills / storytelling](https://github.com/fal-ai-community/skills/blob/main/skills/storytelling/SKILL.md) - fal-ai-community skill for narrative beats, shot planning and continuity across multi-scene videos.
+- [fal-ai-community/skills / ugc](https://github.com/fal-ai-community/skills/blob/main/skills/ugc/SKILL.md) - fal-ai-community skill for creator scripts, demos, unboxing, talking-head ads and short vertical videos, with generation workflows.
+- [heygen-com/skills / heygen-video](https://github.com/heygen-com/skills/blob/master/heygen-video/SKILL.md) - Platform skill for presenter videos, combining script discovery, creative direction, avatar selection and video production.
+- [heygen-com/skills / official-prompt-guide.md](https://github.com/heygen-com/skills/blob/master/heygen-video/references/official-prompt-guide.md) - Platform reference covering script-driven prompts, scene descriptions, voiceover, visual treatments and attachments.
+- [heygen-com/skills / prompt-craft.md](https://github.com/heygen-com/skills/blob/master/heygen-video/references/prompt-craft.md) - Platform reference for structuring a video brief, scene dialogue, exact on-screen text, media choices and style direction.
+- [Jarad-z/ugc-video-skill / SKILL.md](https://github.com/Jarad-z/ugc-video-skill/blob/main/SKILL.md) - Community skill for model-specific UGC scripts and video prompts, with creator personas, plausible settings, dialogue and continuous or timed scene formats.
+- [riffkit/skills / ugc-ad-creative](https://github.com/riffkit/skills/blob/main/ugc-ad-creative/SKILL.md) - Riffkit workflow for adapting a reference video or written idea into a UGC ad, with product and optional character selection; identifies riffkit.ai/SKILL.md as its canonical source.
+- [tengbot/aiads-skills / ugc-ad-skill](https://github.com/tengbot/aiads-skills/blob/main/.agents/skills/ugc-ad-skill/SKILL.md) - AIADS.IM-oriented skill for ad angles, hooks, short scripts, storyboards, captions and creator briefs; published under tengbot.
+
+## Video platform workflows
+
+- [elevenlabs/skills](https://github.com/elevenlabs/skills/blob/main/README.md) - Platform developer skill bundle for speech, audio and voice products; supports voiceover production rather than script composition.
+- [fal-ai-community/skills / commercial](https://github.com/fal-ai-community/skills/blob/main/skills/commercial/SKILL.md) - fal-ai-community skill for commercial shot prompts, product placement and reveal clips; focuses on visual direction and production.
+- [higgsfield-ai/skills / higgsfield-faceless-video](https://github.com/higgsfield-ai/skills/blob/main/higgsfield-faceless-video/SKILL.md) - Platform production skill for narrated explainers, documentaries and illustrated stories, with scene-planning references; explicitly excludes script-only requests.
+- [higgsfield-ai/skills / higgsfield-generate](https://github.com/higgsfield-ai/skills/blob/main/higgsfield-generate/SKILL.md) - Platform skill for Higgsfield generation, including Marketing Studio ads, UGC, products, avatars and hooks; primarily a production workflow.
+- [runwayml/skills](https://github.com/runwayml/skills/blob/main/README.md) - Platform developer skill bundle for integrating Runway generation APIs, models and workflows; not a script-writing guide.
+
 ## Editing and voice
 
 - [alekhomenok/brand-voice-skill](https://github.com/alekhomenok/brand-voice-skill) - Brand-voice template with tone scales, vocabulary and channel-specific rules.
@@ -161,7 +188,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 ## Collection and provenance
 
-The catalog includes individual skills, multi-skill repositories, prompts, linters and research. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
+The catalog includes individual skills, multi-skill repositories, prompts, linters and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
 
 Related projects can share rules, translations or source material. Their entries remain distinct. `related_sources` records relationships stated in inspected sources; it is not a complete genealogy. A GitHub fork flag alone would miss adaptations copied into separate repositories.
 
