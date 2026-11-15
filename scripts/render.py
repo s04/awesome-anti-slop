@@ -1,4 +1,4 @@
-"""Render the alphabetical writing collection from its source catalog."""
+"""Render the alphabetical writing and UI design collection from its source catalog."""
 
 import argparse
 import json
@@ -24,6 +24,7 @@ CATEGORIES = [
     "Author social feeds",
     "Courses and practice",
     "Research and further reading",
+    "UI design",
 ]
 
 
@@ -130,7 +131,7 @@ def render(entries):
     lines = [
         "# Awesome Anti-Slop",
         "",
-        "A collection of writing skills, prompts, linters, guides, books, blogs, newsletters and courses: anti-slop editing, copywriting, prose craft, email, social posts, UGC and video scripts.",
+        "A collection of writing and UI design skills, prompts, tools and references: anti-slop editing, copywriting, prose craft, email, social posts, UGC, video scripts, interface inspiration and component libraries.",
         "",
         f"{len(entries)} resources. Alphabetical within each category. No rankings or recommendations.",
         "",
@@ -159,7 +160,7 @@ def render(entries):
     lines += [
         "## Collection and provenance",
         "",
-        "The catalog includes individual skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
+        "The catalog includes individual skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses, UI design references, component libraries and research. Video entries distinguish script and prompt guidance from production/API workflows. UI entries distinguish inspiration archives, component libraries and agent skills; a listed design or component is not a tested recommendation or a blanket reuse license. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
         "",
         "Reading entries distinguish free resources, paid books and courses, and mixed-access publications. Free access is not permission to republish or adapt. A book description, course syllabus or archive index is recorded as such, not as a full review of the underlying material. Newsletter and columnist entries may supply examples for later style analysis; they are not automatically writing instruction. No paid material was purchased or unlocked to build this collection.",
         "",
@@ -175,7 +176,7 @@ def render(entries):
         "",
         "Open an issue with a source URL, or add a record to `catalog.json` in a pull request. Include the author, category, a neutral description, inspected source URL, revision where available, checksum, inspection date and license metadata. For an adaptation, record its stated sources. Do not add rankings, endorsements or performance claims without attribution.",
         "",
-        "Scope includes writing, editing, research for writing, voice, scripts, correspondence, content planning and published writing examples across languages. Books and courses may be included through public descriptions, with access and inspection scope stated. General-purpose apps and code/UI-only cleanup tools are outside this collection; interface writing is in scope.",
+        "Scope includes writing, editing, research for writing, voice, scripts, correspondence, content planning, published writing examples across languages and UI design. The UI section includes interface inspiration, component libraries and design or redesign skills. Books, courses and paid design services may be included through public descriptions, with access and inspection scope stated. General-purpose apps unrelated to writing or interface design are outside this collection.",
         "",
         "Run `python3 scripts/render.py` after editing the catalog, then `mise run check`. The checks validate catalog records, README freshness, whitespace, links and section anchors. They make public HTTP requests but do not install or execute any collected skill.",
         "",
