@@ -2,7 +2,7 @@
 
 A collection of writing skills, prompts, linters, guides, books, blogs, newsletters and courses: anti-slop editing, copywriting, prose craft, email, social posts, UGC and video scripts.
 
-183 resources. Alphabetical within each category. No rankings or recommendations.
+190 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
@@ -24,6 +24,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Writing guides and essays](#writing-guides-and-essays)
 - [Books on writing](#books-on-writing)
 - [Blogs and newsletters](#blogs-and-newsletters)
+- [Author social feeds](#author-social-feeds)
 - [Courses and practice](#courses-and-practice)
 - [Research and further reading](#research-and-further-reading)
 - [Skill similarity analysis](#skill-similarity-analysis)
@@ -202,11 +203,13 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 ## Writing guides and essays
 
+- [Andrej Karpathy: The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) - Free technical essay explaining recurrent neural networks through diagrams, small implementations and generated examples. Collected as an example of technical explanation, not a writing-instruction skill.
 - [George Orwell: Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) - Free essay on stale imagery, imprecise language, political euphemism and thinking through meaning before choosing words; hosted by the Orwell Foundation.
 - [Google: Technical Writing](https://developers.google.com/tech-writing) - Free technical-writing lessons and facilitator resources for engineers, including document planning, accessibility and helpful error messages.
 - [Gopen and Swan: The Science of Scientific Writing](https://georgegopen.com/scientific-writing-articles/) - Free author resource page linking the scientific-writing article and PDF, focused on sentence structure and reader expectations; the resource page was inspected.
 - [Julian Shapiro: Writing Handbook](https://www.julian.com/guide/write/intro) - Free nonfiction-writing handbook covering ideas, first drafts, rewriting, style and practice; the introductory chapter was inspected.
 - [Mailchimp: Content Style Guide](https://styleguide.mailchimp.com/) - Free house-style guide covering voice and tone, mechanics, newsletters, social posts, accessibility and translation; published under CC BY-NC 4.0.
+- [Martin Fowler: Say Your Writing](https://martinfowler.com/bliki/SayYourWriting.html) - Free essay recommending speaking a draft aloud to find awkward or bland prose and develop a conversational tone; credits Bruce Eckel for the advice.
 - [Microsoft: Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) - Free technology-writing reference covering voice, terminology, inclusive language and communication across apps, websites and documents.
 - [Paul Graham: Taste for Makers](https://www.paulgraham.com/taste.html) - Free essay on cultivating judgment through simplicity, constraints, examples and revision across creative disciplines; broader than prose writing.
 - [Paul Graham: Write Simply](https://www.paulgraham.com/simply.html) - Free essay arguing for ordinary words and straightforward sentences, while allowing deliberate complexity for effect.
@@ -232,6 +235,8 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 ## Blogs and newsletters
 
+- [Andrej Karpathy: Bear Blog](https://karpathy.bearblog.dev/blog/) - Free blog with essays and notes on AI, learning and software, collected as published writing examples. Public index inspected; the full archive was not reviewed.
+- [Andrej Karpathy: Technical Blog](https://karpathy.github.io/) - Free technical blog with neural-network explanations, code walkthroughs and experiment reports, collected as published writing examples. Public index inspected; the full archive was not reviewed.
 - [Ann Handley: Total Annarchy](https://annhandley.com/newsletter/) - Free newsletter combining stories, writing advice and marketing observations; useful as both teaching material and a source of published voice examples.
 - [Austin Kleon: Newsletter](https://austinkleon.substack.com/about) - Free Friday newsletter of writing, art and creative references, with paid Tuesday letters and archive access. Public about page inspected; paid posts not reviewed.
 - [Copyblogger: Blog](https://copyblogger.com/blog/) - Free articles on copywriting, content marketing, audience development and freelance writing; separate coaching and academy products are paid.
@@ -241,11 +246,17 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [George Saunders: Story Club](https://georgesaunders.substack.com/about) - Newsletter on close reading, fiction craft, exercises and reader questions, with free and paid subscriptions. Public about page inspected; paid posts not reviewed.
 - [Harry Dry: Marketing Examples Copywriting](https://marketingexamples.com/copywriting) - Free copywriting examples and breakdowns covering conversational language, headlines, customer language and advertising; the site also offers a free newsletter.
 - [Jane Friedman: Blog](https://janefriedman.com/blog/) - Mixed-access article archive covering fiction and nonfiction craft, revision, editors and publishing, with explicit free and premium filters.
+- [Martin Fowler: Writing Articles](https://martinfowler.com/tags/writing.html) - Free index of articles on writing, including conversational prose, terminology, technical explanation and AI assistance. Includes guest authors; public index inspected, not the full archive.
 - [Matt Levine: Money Stuff](https://mattlevine.co/work) - Finance newsletter and column archive linked from the author's site, collected as published writing examples rather than writing instruction. Bloomberg access conditions vary; author index inspected, not the full archive.
 - [Nicolas Cole: The Art and Business of Writing](https://artandbiz.substack.com/about) - Free essays on digital writing and its business, with paid exercises, breakdowns and masterclasses. Public about page inspected; paid material not reviewed.
 - [Nieman Storyboard](https://niemanstoryboard.org/) - Free narrative-journalism resource with story annotations, craft guides, writer interviews and a newsletter; connects real passages to reporting and structural decisions.
 - [Poynter: Writing Tools Archive](https://www.poynter.org/tag/writing-tools/) - Free archive of writing and editing articles, including Roy Peter Clark's craft guidance and discussions of reporting, language and narrative.
 - [The Paris Review: The Art of Fiction and Other Interviews](https://www.theparisreview.org/interviews) - Mixed-access interview archive on writers' methods, revision and artistic decisions, organized by author and decade. Public index inspected; not every interview reviewed.
+
+## Author social feeds
+
+- [Andrej Karpathy: X](https://x.com/karpathy) - Public @karpathy profile, linked from his own site, for short-form writing examples and pointers to projects. Profile identity inspected; the timeline was not collected or reviewed.
+- [Martin Fowler: Mastodon](https://toot.thoughtworks.com/@mfowler) - Public @mfowler account on Thoughtworks Mastodon, linked from his own site, for short-form writing examples and article pointers. Profile identity inspected; the timeline was not collected or reviewed.
 
 ## Courses and practice
 

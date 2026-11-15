@@ -21,6 +21,7 @@ CATEGORIES = [
     "Writing guides and essays",
     "Books on writing",
     "Blogs and newsletters",
+    "Author social feeds",
     "Courses and practice",
     "Research and further reading",
 ]
