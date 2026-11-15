@@ -26,6 +26,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Blogs and newsletters](#blogs-and-newsletters)
 - [Courses and practice](#courses-and-practice)
 - [Research and further reading](#research-and-further-reading)
+- [Skill similarity analysis](#skill-similarity-analysis)
 - [Collection and provenance](#collection-and-provenance)
 - [Contributing](#contributing)
 
@@ -259,6 +260,136 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [sam-paech/auto-antislop](https://github.com/sam-paech/auto-antislop) - Pipeline for measuring model-specific overused phrases, generating preference data and fine-tuning a model.
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) - Editorial pattern guide cited by many of these skills. Patterns are clues to inspect, not proof of authorship.
 - [zhuyansen/awesome-humanizer-skills](https://github.com/zhuyansen/awesome-humanizer-skills) - A directory spanning writing, code and UI, with published testing and security assessments.
+
+## Skill similarity analysis
+
+The reproducible analysis snapshot covers 70 checksum-verified skill entry files from 52 repositories, out of 183 catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample.
+
+A mutual five-nearest-neighbor graph finds 10 connected communities and 16 unconnected skills at the chosen 0.15 similarity threshold. Median group agreement after randomly removing 20% of each skill's retained lines is 0.79 on adjusted Rand agreement (1 means identical partitions; 0 is chance-level agreement). These are exploratory wording groups, not schools of thought or effectiveness rankings.
+
+Hard hierarchical clusters separate poorly: the largest silhouette score is 0.096, and the selected split has group sizes 69, 1. Eight non-negative matrix factorization topics instead expose overlapping vocabularies around prose editing, technical articles, marketing/email, fiction critique and video production. Topic weights are not probabilities.
+
+![Lexical neighborhood map](analysis/neighborhood-map.png)
+
+The map compresses many text dimensions into two. Follow graph edges and exact scores rather than reading every plotted distance literally. Numbers identify the skills in the index below.
+
+The second map excludes same-repository candidates before choosing nearest neighbors: it has 7 connected groups, 29 unconnected skills, and median perturbation agreement of 0.88. This helps separate a publisher's shared framing from resemblance across publishers. It does not make repositories independent; adaptations may still share an upstream source. Cross-repository neighbor lists and sensitivity to neighbor count and edge threshold are included in the full results.
+
+![Cross-repository neighborhood map](analysis/cross-repository-map.png)
+
+### Observed lexical overlap
+
+The largest pair scores in this snapshot are shown below. A score measures shared wording, not the share of rules that agree or a probability of copying. Negation and examples can make opposing instructions look similar.
+
+| Skill | Neighbor | Combined cosine | Shared five-word phrase Jaccard |
+| --- | --- | ---: | ---: |
+| henders23/humaniser | blader/humanizer | 0.629 | 0.063 |
+| petergyang/no-ai-slop | msimchowitz/writing-skills | 0.588 | 0.083 |
+| westonhancock/unslop | petergyang/no-ai-slop | 0.565 | 0.089 |
+| hardikpandya/stop-slop | davidamitchell/Skills | 0.473 | 0.058 |
+| fal-ai-community/skills | fal-ai-community/skills | 0.459 | 0.030 |
+
+![Pairwise lexical similarity heatmap](analysis/similarity-heatmap.png)
+
+### Shared vocabulary and mixed topics
+
+The shared-vocabulary cloud counts each repository once per term, reducing the influence of publishers with several collected skills. Repositories can still share an upstream source. Frequent words and quoted bad examples are mentions, not endorsed writing principles.
+
+![Repository-balanced shared vocabulary](analysis/shared-vocabulary.png)
+
+![Eight topic word clouds](analysis/topic-wordclouds.png)
+
+![Per-skill topic mixtures](analysis/topic-mixtures.png)
+
+### Robustness and extractive distillation
+
+Word, character, latent-factor and exact-phrase methods reveal different kinds of resemblance. The correlations below compare all skill pairs; they are not independent observations or statistical significance tests.
+
+![Correlations between similarity methods](analysis/method-correlations.png)
+
+An extractive experiment selects 20 paragraph locations to cover repeated, repository-balanced vocabulary while penalizing length. They cover 17.4% of that vocabulary weight. This is a compact set of passages to inspect, not a synthesized skill or a quality recommendation. Phrase-order permutation controls and source locators are retained in the results.
+
+![Grouping stability and extractive coverage](analysis/stability-and-coverage.png)
+
+[Methods and reproduction](docs/guides/skill-analysis.md) · [Full results](analysis/results.json) · [Skill index and nearest neighbors](analysis/skills.csv) · [All pair scores](analysis/pairs.csv)
+
+<details>
+<summary>Skill index for the figures</summary>
+
+| Index | Skill | Graph group |
+| ---: | --- | ---: |
+| 1 | [0xAnni/ugc-creator / SKILL.md](https://github.com/0xAnni/ugc-creator/blob/a76d9f34a057d996b2475b9ed5f3bf8dc5b734ae/SKILL.md) | 11 |
+| 2 | [Aboudjem/humanizer-skill](https://github.com/Aboudjem/humanizer-skill/blob/a58df065367550b6ce40ff3f648335018d8e0589/skills/humanizer/SKILL.md) | 2 |
+| 3 | [adewale/anti-slop-writing](https://github.com/adewale/anti-slop-writing/blob/e96aee9360a640fe58fd4b340669d6607ea31567/skills/anti-slop-writing/SKILL.md) | 12 |
+| 4 | [Advibly/skills / ugc-ads](https://github.com/Advibly/skills/blob/f26533200a4906d552a0dc8c19576935df28be02/ugc-ads/SKILL.md) | 4 |
+| 5 | [amanattar/email-drafter](https://github.com/amanattar/email-drafter/blob/b794cf2bda921e6fbfcecefe5cab67dbf950a38a/SKILL.md) | 1 |
+| 6 | [ameenmo/humanize-skill](https://github.com/ameenmo/humanize-skill/blob/9066409eb92c48fe365a58c998f695185253aae0/SKILL.md) | 5 |
+| 7 | [analystacademy/claude-skills / email](https://github.com/analystacademy/claude-skills/blob/736213aca92c0f423f81f4aad9224db1b9d1f517/email/SKILL.md) | 1 |
+| 8 | [Anbeeld/WRITING.md / writing](https://github.com/Anbeeld/WRITING.md/blob/0c127ca4a4e51debec5adf4816f2bf464d83438b/skills/writing/SKILL.md) | 2 |
+| 9 | [AnswerDotAI/skill-plugins](https://github.com/AnswerDotAI/skill-plugins/blob/18be134dd175bd6240d2f7c5f21f08282cc80c54/plugins/codex-aai/skills/write-prose/SKILL.md) | 2 |
+| 10 | [anthropics/skills / doc-coauthoring](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/doc-coauthoring/SKILL.md) | 1 |
+| 11 | [anthropics/skills / internal-comms](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/internal-comms/SKILL.md) | 13 |
+| 12 | [blader/humanizer](https://github.com/blader/humanizer/blob/b48c832f0f809c1b5658edbb838c2521b72f2413/SKILL.md) | 2 |
+| 13 | [Bomx/super-video-maker-skill / SKILL.md](https://github.com/Bomx/super-video-maker-skill/blob/3fec4aa66a1d4f8b249746eabc372547f67bba5c/SKILL.md) | 4 |
+| 14 | [Calliope-Editor/writing-skills / prose-rhythm](https://github.com/Calliope-Editor/writing-skills/blob/2fad031982cbbcb00c4da14c2fc9712d2daa78da/skills/craft/prose-rhythm/SKILL.md) | 6 |
+| 15 | [Calliope-Editor/writing-skills / workshop-critique](https://github.com/Calliope-Editor/writing-skills/blob/2fad031982cbbcb00c4da14c2fc9712d2daa78da/skills/critique/workshop-critique/SKILL.md) | 6 |
+| 16 | [Calliope-Editor/writing-skills / developmental-editor](https://github.com/Calliope-Editor/writing-skills/blob/2fad031982cbbcb00c4da14c2fc9712d2daa78da/skills/editorial/developmental-editor/SKILL.md) | 6 |
+| 17 | [Calliope-Editor/writing-skills / line-editor](https://github.com/Calliope-Editor/writing-skills/blob/2fad031982cbbcb00c4da14c2fc9712d2daa78da/skills/editorial/line-editor/SKILL.md) | 6 |
+| 18 | [ComposioHQ/awesome-claude-skills / content-research-writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/be2a406907dbc61b73e6827ded415c96139d13a2/content-research-writer/SKILL.md) | 1 |
+| 19 | [coreyhaines31/marketingskills / ad-creative](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/ad-creative/SKILL.md) | 3 |
+| 20 | [coreyhaines31/marketingskills / cold-email](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/cold-email/SKILL.md) | 3 |
+| 21 | [coreyhaines31/marketingskills / content-strategy](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/content-strategy/SKILL.md) | 3 |
+| 22 | [coreyhaines31/marketingskills / copy-editing](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/copy-editing/SKILL.md) | 3 |
+| 23 | [coreyhaines31/marketingskills / copywriting](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/copywriting/SKILL.md) | 3 |
+| 24 | [coreyhaines31/marketingskills / emails](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/emails/SKILL.md) | 3 |
+| 25 | [coreyhaines31/marketingskills / public-relations](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/public-relations/SKILL.md) | 3 |
+| 26 | [coreyhaines31/marketingskills / social](https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/social/SKILL.md) | 3 |
+| 27 | [danielabar/meblog / blog-editor](https://github.com/danielabar/meblog/blob/a4a0f0acda202cffd715b1edde912533e66670d7/.claude/skills/blog-editor/SKILL.md) | 1 |
+| 28 | [davidamitchell/Skills](https://github.com/davidamitchell/Skills/blob/17196c19a89eacdf5c9f41d445ca4cf8379a2c6a/remove-ai-slop/SKILL.md) | 7 |
+| 29 | [davidcogan/avoid-ai-writing](https://github.com/davidcogan/avoid-ai-writing/blob/5c9bc08dc308baec6ba78cf2e668e32923a77bce/SKILL.md) | 2 |
+| 30 | [eskayML/anti-slop](https://github.com/eskayML/anti-slop/blob/63be30e23a56c3c969c9e456789804f685580642/SKILL.md) | 14 |
+| 31 | [fal-ai-community/skills / commercial](https://github.com/fal-ai-community/skills/blob/ca79376d624d244e601f9182fa80b5bf66efec9c/skills/commercial/SKILL.md) | 8 |
+| 32 | [fal-ai-community/skills / storytelling](https://github.com/fal-ai-community/skills/blob/ca79376d624d244e601f9182fa80b5bf66efec9c/skills/storytelling/SKILL.md) | 8 |
+| 33 | [fal-ai-community/skills / ugc](https://github.com/fal-ai-community/skills/blob/ca79376d624d244e601f9182fa80b5bf66efec9c/skills/ugc/SKILL.md) | 8 |
+| 34 | [firemonster612/human-writing-skill](https://github.com/firemonster612/human-writing-skill/blob/b3109c94ea5752c9fccce67d55fc9161df2f4be2/skills/human-writing/SKILL.md) | 2 |
+| 35 | [hannsxpeter/humanizer](https://github.com/hannsxpeter/humanizer/blob/e8f1248a7d4919689c1f942e356ed95b102d9f07/SKILL.md) | 5 |
+| 36 | [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop/blob/8da1f030185bdfe8471220585162991eaeb970e9/SKILL.md) | 7 |
+| 37 | [henders23/humaniser](https://github.com/henders23/humaniser/blob/a45cfbba9fde843d670e553a0aa98f6a23d7fb28/SKILL.md) | 2 |
+| 38 | [heygen-com/skills / heygen-video](https://github.com/heygen-com/skills/blob/1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a/heygen-video/SKILL.md) | 4 |
+| 39 | [higgsfield-ai/skills / higgsfield-faceless-video](https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/higgsfield-faceless-video/SKILL.md) | 15 |
+| 40 | [higgsfield-ai/skills / higgsfield-generate](https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/higgsfield-generate/SKILL.md) | 4 |
+| 41 | [hivijc/higgsfield-ugc-playbook / SKILL.md](https://github.com/hivijc/higgsfield-ugc-playbook/blob/9ce65f28b8e15ad6ce0fd15d591f95e891dba683/SKILL.md) | 4 |
+| 42 | [Hmbown/taste / SKILL.md](https://github.com/Hmbown/taste/blob/c9ec83bebd0fbb3b75526d846240e0bcd71e1314/SKILL.md) | 16 |
+| 43 | [iizcm/stop-slop-skill](https://github.com/iizcm/stop-slop-skill/blob/32e767117e20f9aceff05a2fde427b48d67d1825/SKILL.md) | 7 |
+| 44 | [Jarad-z/ugc-video-skill / SKILL.md](https://github.com/Jarad-z/ugc-video-skill/blob/f0a015b380cbdcf8e980221c0b63ba5a57108912/SKILL.md) | 4 |
+| 45 | [joebenscoter86/higgsfield-ugc-workflow / ugc-brief](https://github.com/joebenscoter86/higgsfield-ugc-workflow/blob/6a9bea537f17f8ea2e49686512a2c72c9c33e72d/skills/ugc-brief/SKILL.md) | 9 |
+| 46 | [joebenscoter86/higgsfield-ugc-workflow / ugc-multicut-script](https://github.com/joebenscoter86/higgsfield-ugc-workflow/blob/6a9bea537f17f8ea2e49686512a2c72c9c33e72d/skills/ugc-multicut-script/SKILL.md) | 9 |
+| 47 | [judetelan/ai-humanizer](https://github.com/judetelan/ai-humanizer/blob/76bf08f13bee88044f448fd1b80604e33bb662b6/SKILL.md) | 17 |
+| 48 | [kjmagnan1s/anti-slop](https://github.com/kjmagnan1s/anti-slop/blob/4a3ec6da8c25087328b640b8c69ef151c47dbc1f/SKILL.md) | 18 |
+| 49 | [lucaslinares1/gtm-skills / email-writer](https://github.com/lucaslinares1/gtm-skills/blob/6e20a37ae69ce0723b3fd80ae8a7aa5c02531e03/skills/email-writer/SKILL.md) | 1 |
+| 50 | [majesticlabs-dev/writing-eval / writing-eval](https://github.com/majesticlabs-dev/writing-eval/blob/74dcd167542b97f9044ba985a69e150ad4959e55/skills/writing-eval/SKILL.md) | 19 |
+| 51 | [Mark-Life/agent-skills / writing-for-readers](https://github.com/Mark-Life/agent-skills/blob/02de9557dc6c009160896bb1dd37be4794dbbfca/skills/communication/writing-for-readers/SKILL.md) | 20 |
+| 52 | [misbahsy/anti-ai-slop](https://github.com/misbahsy/anti-ai-slop/blob/1b7d68f2de11e6dd7221681371d88e3d160eb46a/skills/anti-ai-slop/SKILL.md) | 5 |
+| 53 | [msimchowitz/writing-skills / general-writing](https://github.com/msimchowitz/writing-skills/blob/214981fe02326f27b0fc8790d00eb4b731607073/for-agents/general-writing/SKILL.md) | 5 |
+| 54 | [msimchowitz/writing-skills / writing-cadence](https://github.com/msimchowitz/writing-skills/blob/214981fe02326f27b0fc8790d00eb4b731607073/for-agents/writing-cadence/SKILL.md) | 21 |
+| 55 | [pedronauck/skills / writing-tech-post](https://github.com/pedronauck/skills/blob/8a05756d6bdb8e1057769f9765ad1f13b5abd4ec/skills/mine/writing-tech-post/SKILL.md) | 22 |
+| 56 | [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop/blob/000650b156983f5159695b441477f4e63b25dc85/skills/no-ai-slop/SKILL.md) | 5 |
+| 57 | [RealAdarsh/skills / technical-blog-writing](https://github.com/RealAdarsh/skills/blob/3621f81d21aa2ebb6524234e76aba035eac90e57/skills/technical-blog-writing/SKILL.md) | 1 |
+| 58 | [richtabor/agent-skills / red-pen](https://github.com/richtabor/agent-skills/blob/89eb2e97fdde10396972ad38200a57afffd11226/skills/red-pen/SKILL.md) | 23 |
+| 59 | [richtabor/agent-skills / technical-writing](https://github.com/richtabor/agent-skills/blob/89eb2e97fdde10396972ad38200a57afffd11226/skills/technical-writing/SKILL.md) | 1 |
+| 60 | [riffkit/skills / ugc-ad-creative](https://github.com/riffkit/skills/blob/b918ebf930fd1fcef13a5cc46a4d0675129e175b/ugc-ad-creative/SKILL.md) | 4 |
+| 61 | [SalZaki/antislop](https://github.com/SalZaki/antislop/blob/b9c5b74dab49d536229e2d5be38b9cd8cfa20d7e/skills/remove-ai-slop/SKILL.md) | 24 |
+| 62 | [sineminflux/no-ai-slop](https://github.com/sineminflux/no-ai-slop/blob/5e00ab2e5cdf139f4c2700a67361f3e72ea29ea0/SKILL.md) | 25 |
+| 63 | [sjmoran/claude-blog-prose / blog-prose](https://github.com/sjmoran/claude-blog-prose/blob/820fe91ed0ae26040041d7db699b59e5d7ebd7d0/skills/blog-prose/SKILL.md) | 2 |
+| 64 | [social-media-skills/skills / voice-builder](https://github.com/social-media-skills/skills/blob/f28cef2b7067ec64e79c9d85421c022c06659e03/skills/voice-builder/SKILL.md) | 10 |
+| 65 | [social-media-skills/skills / writing-style-and-tone](https://github.com/social-media-skills/skills/blob/f28cef2b7067ec64e79c9d85421c022c06659e03/skills/writing-style-and-tone/SKILL.md) | 10 |
+| 66 | [tamirdresher/squad-skills / blog-writing](https://github.com/tamirdresher/squad-skills/blob/a9a13c97651f98f4aef304686ae0b1c1e7311670/plugins/blog-writing/SKILL.md) | 1 |
+| 67 | [tengbot/aiads-skills / ugc-ad-skill](https://github.com/tengbot/aiads-skills/blob/7130c09a28049780a26d6b768d6b57d30330270c/.agents/skills/ugc-ad-skill/SKILL.md) | 26 |
+| 68 | [tuananhbui89/skills / research-blog-writer](https://github.com/tuananhbui89/skills/blob/c4cc383ac8d5c8580ab0028b714e42fdc960b78d/research-blog-writer/SKILL.md) | 1 |
+| 69 | [vidanov/writing-craft-skill / SKILL.md](https://github.com/vidanov/writing-craft-skill/blob/07af260cf2a2fc9b595a78f1179d9e013f3bb5fb/SKILL.md) | 2 |
+| 70 | [westonhancock/unslop](https://github.com/westonhancock/unslop/blob/fc3ee0b27062c4d4e4e73fdd04337b3188e57ea1/SKILL.md) | 5 |
+
+</details>
 
 ## Collection and provenance
 

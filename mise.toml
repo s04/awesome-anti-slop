@@ -1,3 +1,7 @@
 [tasks.check]
 description = "Validate catalog, generated README, whitespace and links"
-run = ["git diff --check", "python3 scripts/render.py --check", "python3 scripts/check.py"]
+run = ["python3 -m unittest discover -s scripts -p 'test_*.py'", "git diff --check", "python3 scripts/render.py --check", "python3 scripts/check.py"]
+
+[tasks.analyze]
+description = "Compare pinned skill texts without model APIs and regenerate figures"
+run = ["env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked scripts/analyze_skills.py", "python3 scripts/render.py"]

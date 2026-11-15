@@ -49,6 +49,82 @@ def load_catalog():
     return entries
 
 
+def render_analysis():
+    path = ROOT / "analysis/results.json"
+    if not path.exists():
+        return []
+    result = json.loads(path.read_text(encoding="utf-8"))
+    scope = result["scope"]
+    graph = result["knn_graph"]
+    cross = result["cross_repository_graph"]
+    skills = result["skills"]
+    connected = [group for group in graph["communities"] if len(group) > 1]
+    cluster_sizes = sorted((len(group["members"]) for group in result["clusters"]), reverse=True)
+    silhouette = max(row["silhouette"] for row in result["clustering_trials"])
+    lines = [
+        "## Skill similarity analysis",
+        "",
+        f"The reproducible analysis snapshot covers {scope['verified_skills']} checksum-verified skill entry files from {scope['repositories']} repositories, out of {scope['catalog_entries']} catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample.",
+        "",
+        f"A mutual five-nearest-neighbor graph finds {len(connected)} connected communities and {len(graph['isolates'])} unconnected skills at the chosen 0.15 similarity threshold. Median group agreement after randomly removing 20% of each skill's retained lines is {graph['perturbation_ari_median']:.2f} on adjusted Rand agreement (1 means identical partitions; 0 is chance-level agreement). These are exploratory wording groups, not schools of thought or effectiveness rankings.",
+        "",
+        f"Hard hierarchical clusters separate poorly: the largest silhouette score is {silhouette:.3f}, and the selected split has group sizes {', '.join(map(str, cluster_sizes))}. Eight non-negative matrix factorization topics instead expose overlapping vocabularies around prose editing, technical articles, marketing/email, fiction critique and video production. Topic weights are not probabilities.",
+        "",
+        "![Lexical neighborhood map](analysis/neighborhood-map.png)",
+        "",
+        "The map compresses many text dimensions into two. Follow graph edges and exact scores rather than reading every plotted distance literally. Numbers identify the skills in the index below.",
+        "",
+        f"The second map excludes same-repository candidates before choosing nearest neighbors: it has {sum(len(group)>1 for group in cross['communities'])} connected groups, {len(cross['isolates'])} unconnected skills, and median perturbation agreement of {cross['perturbation_ari_median']:.2f}. This helps separate a publisher's shared framing from resemblance across publishers. It does not make repositories independent; adaptations may still share an upstream source. Cross-repository neighbor lists and sensitivity to neighbor count and edge threshold are included in the full results.",
+        "",
+        "![Cross-repository neighborhood map](analysis/cross-repository-map.png)",
+        "",
+        "### Observed lexical overlap",
+        "",
+        "The largest pair scores in this snapshot are shown below. A score measures shared wording, not the share of rules that agree or a probability of copying. Negation and examples can make opposing instructions look similar.",
+        "",
+        "| Skill | Neighbor | Combined cosine | Shared five-word phrase Jaccard |",
+        "| --- | --- | ---: | ---: |",
+    ]
+    for pair in result["top_pairs"][:5]:
+        a, b = skills[pair["a"]], skills[pair["b"]]
+        lines.append(f"| {a['repo']} | {b['repo']} | {pair['combined']:.3f} | {pair['phrase_jaccard']:.3f} |")
+    lines += [
+        "",
+        "![Pairwise lexical similarity heatmap](analysis/similarity-heatmap.png)",
+        "",
+        "### Shared vocabulary and mixed topics",
+        "",
+        "The shared-vocabulary cloud counts each repository once per term, reducing the influence of publishers with several collected skills. Repositories can still share an upstream source. Frequent words and quoted bad examples are mentions, not endorsed writing principles.",
+        "",
+        "![Repository-balanced shared vocabulary](analysis/shared-vocabulary.png)",
+        "",
+        "![Eight topic word clouds](analysis/topic-wordclouds.png)",
+        "",
+        "![Per-skill topic mixtures](analysis/topic-mixtures.png)",
+        "",
+        "### Robustness and extractive distillation",
+        "",
+        "Word, character, latent-factor and exact-phrase methods reveal different kinds of resemblance. The correlations below compare all skill pairs; they are not independent observations or statistical significance tests.",
+        "",
+        "![Correlations between similarity methods](analysis/method-correlations.png)",
+        "",
+        f"An extractive experiment selects 20 paragraph locations to cover repeated, repository-balanced vocabulary while penalizing length. They cover {result['extractive_coverage'][-1]['vocabulary_coverage']:.1%} of that vocabulary weight. This is a compact set of passages to inspect, not a synthesized skill or a quality recommendation. Phrase-order permutation controls and source locators are retained in the results.",
+        "",
+        "![Grouping stability and extractive coverage](analysis/stability-and-coverage.png)",
+        "",
+        "[Methods and reproduction](docs/guides/skill-analysis.md) · [Full results](analysis/results.json) · [Skill index and nearest neighbors](analysis/skills.csv) · [All pair scores](analysis/pairs.csv)",
+        "",
+        "<details>",
+        "<summary>Skill index for the figures</summary>",
+        "",
+        "| Index | Skill | Graph group |",
+        "| ---: | --- | ---: |",
+    ]
+    for i, skill in enumerate(skills):
+        lines.append(f"| {i+1} | [{skill['title']}]({skill['source_url']}) | {skill['graph_group']+1} |")
+    return lines + ["", "</details>", ""]
+
+
 def render(entries):
     lines = [
         "# Awesome Anti-Slop",
@@ -66,6 +142,8 @@ def render(entries):
     ]
     for category in CATEGORIES:
         lines.append(f"- [{category}](#{category.lower().replace(' ', '-')})")
+    if (ROOT / "analysis/results.json").exists():
+        lines.append("- [Skill similarity analysis](#skill-similarity-analysis)")
     lines += ["- [Collection and provenance](#collection-and-provenance)", "- [Contributing](#contributing)", ""]
     for category in CATEGORIES:
         lines += [f"## {category}", ""]
@@ -76,6 +154,7 @@ def render(entries):
         for entry in members:
             lines.append(f"- [{entry['title']}]({entry['url']}) - {entry['description']}")
         lines.append("")
+    lines += render_analysis()
     lines += [
         "## Collection and provenance",
         "",
