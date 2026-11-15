@@ -1,4 +1,4 @@
-"""Render the alphabetical writing and UI design collection from its source catalog."""
+"""Render the writing collection and its UI companion from their source catalogs."""
 
 import argparse
 import json
@@ -24,12 +24,13 @@ CATEGORIES = [
     "Author social feeds",
     "Courses and practice",
     "Research and further reading",
-    "UI design",
 ]
+DOCUMENTS = ("README.md", "ui/README.md")
 
 
-def load_catalog():
-    catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+def load_catalog(path=None, categories=None):
+    catalog = json.loads((path or ROOT / "catalog.json").read_text(encoding="utf-8"))
+    categories = CATEGORIES if categories is None else categories
     if catalog["schema_version"] != 1:
         raise ValueError("Unsupported catalog schema")
     entries = catalog["entries"]
@@ -37,7 +38,7 @@ def load_catalog():
         if len({entry[key] for entry in entries}) != len(entries):
             raise ValueError(f"Duplicate catalog {key}")
     for entry in entries:
-        if entry["category"] not in CATEGORIES:
+        if entry["category"] not in categories:
             raise ValueError(f"Unknown category: {entry['category']}")
         if not re.fullmatch(r"[0-9a-f]{64}", entry["source_sha256"]):
             raise ValueError(f"Invalid source checksum: {entry['id']}")
@@ -127,13 +128,45 @@ def render_analysis():
     return lines + ["", "</details>", ""]
 
 
+def render_categories(entries, categories):
+    lines = []
+    for category in categories:
+        lines += [f"## {category}", ""]
+        members = sorted(
+            (entry for entry in entries if entry["category"] == category),
+            key=lambda entry: entry["title"].lower(),
+        )
+        for entry in members:
+            lines.append(f"- [{entry['title']}]({entry['url']}) - {entry['description']}")
+        lines.append("")
+    return lines
+
+
+def render_ui(entries):
+    return "\n".join([
+        "# UI design references",
+        "",
+        "Companion to [Awesome Anti-Slop](../README.md), whose main collection focuses on writing.",
+        "",
+        f"{len(entries)} resources for interface inspiration, components and design skills. Alphabetical; no rankings or recommendations.",
+        "",
+        "[catalog.json](catalog.json) records source URLs, pinned skill revisions, checksums, inspection scope and license metadata. Descriptions reflect inspected public pages or skill entries; components and generated designs were not independently evaluated. Linked designs, components and bundled references retain their own reuse terms.",
+        "",
+        *render_categories(entries, ["UI design"]),
+        "## Contributing",
+        "",
+        "Add UI resources to `ui/catalog.json` and regenerate both documents with `python3 scripts/render.py` from the repository root. Keep source attribution and inspection limits. Run `mise run check` to validate both collections, generated documents and links.",
+        "",
+    ])
+
+
 def render(entries):
     lines = [
         "# Awesome Anti-Slop",
         "",
-        "Skills, prompts, tools and references for writing and UI design, from prose and copywriting to interface inspiration and components.",
+        "Skills, prompts, tools and references for writing: anti-slop editing, copywriting, articles, email, newsletters, social posts and scripts.",
         "",
-        "Browse [writing and content](#anti-slop-writing) or [UI design](#ui-design).",
+        "UI inspiration, component libraries and design skills are collected separately in the [UI design companion](ui/README.md).",
         "",
         f"{len(entries)} resources. Alphabetical within each category. No rankings or recommendations.",
         "",
@@ -149,20 +182,12 @@ def render(entries):
     if (ROOT / "analysis/results.json").exists():
         lines.append("- [Skill similarity analysis](#skill-similarity-analysis)")
     lines += ["- [Collection and provenance](#collection-and-provenance)", "- [Contributing](#contributing)", ""]
-    for category in CATEGORIES:
-        lines += [f"## {category}", ""]
-        members = sorted(
-            (entry for entry in entries if entry["category"] == category),
-            key=lambda entry: entry["title"].lower(),
-        )
-        for entry in members:
-            lines.append(f"- [{entry['title']}]({entry['url']}) - {entry['description']}")
-        lines.append("")
+    lines += render_categories(entries, CATEGORIES)
     lines += render_analysis()
     lines += [
         "## Collection and provenance",
         "",
-        "The catalog includes individual skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses, UI design references, component libraries and research. Video entries distinguish script and prompt guidance from production/API workflows. UI entries distinguish inspiration archives, component libraries and agent skills; a listed design or component is not a tested recommendation or a blanket reuse license. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
+        "The main catalog includes individual writing skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.",
         "",
         "Reading entries distinguish free resources, paid books and courses, and mixed-access publications. Free access is not permission to republish or adapt. A book description, course syllabus or archive index is recorded as such, not as a full review of the underlying material. Newsletter and columnist entries may supply examples for later style analysis; they are not automatically writing instruction. No paid material was purchased or unlocked to build this collection.",
         "",
@@ -178,7 +203,7 @@ def render(entries):
         "",
         "Open an issue with a source URL, or add a record to `catalog.json` in a pull request. Include the author, category, a neutral description, inspected source URL, revision where available, checksum, inspection date and license metadata. For an adaptation, record its stated sources. Do not add rankings, endorsements or performance claims without attribution.",
         "",
-        "Scope includes writing, editing, research for writing, voice, scripts, correspondence, content planning, published writing examples across languages and UI design. The UI section includes interface inspiration, component libraries and design or redesign skills. Books, courses and paid design services may be included through public descriptions, with access and inspection scope stated. General-purpose apps unrelated to writing or interface design are outside this collection.",
+        "The main collection covers writing, editing, research for writing, voice, scripts, correspondence, content planning and published writing examples across languages. Books and courses may be included through public descriptions, with access and inspection scope stated. Interface inspiration, component libraries and design or redesign skills belong in the [UI design companion](ui/README.md) and its `ui/catalog.json`. General-purpose apps unrelated to either collection are outside scope.",
         "",
         "Run `python3 scripts/render.py` after editing the catalog, then `mise run check`. The checks validate catalog records, README freshness, whitespace, links and section anchors. They make public HTTP requests but do not install or execute any collected skill.",
         "",
@@ -194,14 +219,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    output = render(load_catalog())
-    path = ROOT / "README.md"
+    outputs = (
+        render(load_catalog()),
+        render_ui(load_catalog(ROOT / "ui/catalog.json", ["UI design"])),
+    )
+    for name, output in zip(DOCUMENTS, outputs, strict=True):
+        path = ROOT / name
+        if args.check:
+            if not path.exists() or path.read_text(encoding="utf-8") != output:
+                parser.exit(1, f"{name} is stale; run python3 scripts/render.py\n")
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(output, encoding="utf-8")
     if args.check:
-        if path.read_text(encoding="utf-8") != output:
-            parser.exit(1, "README is stale; run python3 scripts/render.py\n")
-        print("Catalog valid; README matches catalog.")
-    else:
-        path.write_text(output, encoding="utf-8")
+        print("Both catalogs valid; generated READMEs match.")
 
 
 if __name__ == "__main__":

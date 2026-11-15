@@ -1,5 +1,5 @@
 [tasks.check]
-description = "Validate catalog, generated README, whitespace and links"
+description = "Validate both catalogs, generated READMEs, whitespace and links"
 run = ["python3 -m unittest discover -s scripts -p 'test_*.py'", "git diff --check", "python3 scripts/render.py --check", "python3 scripts/check.py"]
 
 [tasks.analyze]

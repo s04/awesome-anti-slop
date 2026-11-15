@@ -11,7 +11,7 @@ mise run check
 
 ## Corpus and source integrity
 
-`catalog.json` is the inventory. Only entries with `kind: skill` and a pinned GitHub source are eligible. A book description, repository README and complete skill are not interchangeable documents. The analysis does not recursively read referenced guides, bundled examples or every skill inside repository-level entries. This limits conclusions about an entire skill bundle.
+`catalog.json` is the writing inventory. The UI companion uses `ui/catalog.json` and does not enter this analysis. Only entries with `kind: skill` and a pinned GitHub source in the writing inventory are eligible. A book description, repository README and complete skill are not interchangeable documents. The analysis does not recursively read referenced guides, bundled examples or every skill inside repository-level entries. This limits conclusions about an entire skill bundle.
 
 Sources are fetched at their recorded revision and verified against the catalog SHA-256 before analysis. The local `.cache/skill-analysis/` directory is ignored by Git. Failing sources are excluded with their errors recorded in `analysis/results.json`; never interpret missing sources as zero-similarity skills. Generated files contain measurements, vocabulary and source locators rather than copies of the full upstream texts.
 

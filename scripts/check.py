@@ -7,6 +7,7 @@ import sys
 import urllib.error
 import urllib.request
 
+from render import DOCUMENTS
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -30,23 +31,31 @@ def check_url(url):
     return None
 
 
-def main():
-    source = (ROOT / "README.md").read_text(encoding="utf-8")
-    links = re.findall(r"\[[^\]]+\]\(([^)]+)\)", source)
+def anchors(source):
     headings = re.findall(r"^#+ (.+)$", source, re.MULTILINE)
-    anchors = {
+    return {
         re.sub(r"[^\w\- ]", "", heading.lower()).replace(" ", "-")
         for heading in headings
     }
-    errors = []
-    for link in links:
-        if link.startswith("#"):
-            if link[1:] not in anchors:
-                errors.append(f"Missing section: {link}")
-        elif not link.startswith("https://"):
-            if not (ROOT / link).is_file():
-                errors.append(f"Missing local file: {link}")
-    urls = sorted({link for link in links if link.startswith("https://")})
+def collect_links(documents):
+    urls, errors = set(), []
+    for path in documents:
+        source = path.read_text(encoding="utf-8")
+        for link in re.findall(r"\[[^\]]+\]\(([^)]+)\)", source):
+            if link.startswith("https://"):
+                urls.add(link)
+                continue
+            relative, _, fragment = link.partition("#")
+            target = path.parent / relative if relative else path
+            if not target.is_file():
+                errors.append(f"{path}: Missing local file: {link}")
+            elif fragment and fragment not in anchors(target.read_text(encoding="utf-8")):
+                errors.append(f"{path}: Missing section: {link}")
+    return sorted(urls), errors
+
+
+def main():
+    urls, errors = collect_links([ROOT / name for name in DOCUMENTS])
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         errors.extend(error for error in pool.map(check_url, urls) if error)
     if errors:

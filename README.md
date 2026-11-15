@@ -1,10 +1,10 @@
 # Awesome Anti-Slop
 
-Skills, prompts, tools and references for writing and UI design, from prose and copywriting to interface inspiration and components.
+Skills, prompts, tools and references for writing: anti-slop editing, copywriting, articles, email, newsletters, social posts and scripts.
 
-Browse [writing and content](#anti-slop-writing) or [UI design](#ui-design).
+UI inspiration, component libraries and design skills are collected separately in the [UI design companion](ui/README.md).
 
-199 resources. Alphabetical within each category. No rankings or recommendations.
+190 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
@@ -29,7 +29,6 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Author social feeds](#author-social-feeds)
 - [Courses and practice](#courses-and-practice)
 - [Research and further reading](#research-and-further-reading)
-- [UI design](#ui-design)
 - [Skill similarity analysis](#skill-similarity-analysis)
 - [Collection and provenance](#collection-and-provenance)
 - [Contributing](#contributing)
@@ -275,18 +274,6 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) - Editorial pattern guide cited by many of these skills. Patterns are clues to inspect, not proof of authorship.
 - [zhuyansen/awesome-humanizer-skills](https://github.com/zhuyansen/awesome-humanizer-skills) - A directory spanning writing, code and UI, with published testing and security assessments.
 
-## UI design
-
-- [21st.dev](https://21st.dev/) - Community component, template and theme library with source code and prompts for coding agents. Offers free access with copy limits and paid plans; public homepage and pricing inspected.
-- [Designeer](https://designeer.xyz/) - Curated catalog of interface craft, design inspiration, component libraries, tools and portfolios for designers and developers. Public homepage inspected; linked resources retain their own access and reuse terms.
-- [Hallmark (Nutlope)](https://github.com/Nutlope/hallmark/blob/main/skills/hallmark/SKILL.md) - UI design skill for new websites and explicitly requested audits or redesigns, with design tokens, composition choices, accessibility checks and a bundled visual linter. Entry instructions inspected; generated results were not evaluated.
-- [Inspora](https://inspora.design/) - Curated visual-design archive spanning web, branding, product, motion and illustration, with sign-in features for saving inspiration. Public homepage inspected; individual projects and underlying assets were not reviewed.
-- [Magic UI](https://magicui.design/) - React, TypeScript, Tailwind CSS and Motion component library with animated effects, plus a separate Pro template offering. Public homepage inspected; component behavior and accessibility were not independently tested.
-- [Mobbin](https://mobbin.com/) - Design-reference library of shipped mobile and web screens, flows, animations and UI elements, with free signup and paid plans. Public homepage inspected; account-only collections were not accessed.
-- [React Bits](https://reactbits.dev/) - Animated React components, text effects, backgrounds and interactions, offered in JavaScript or TypeScript with CSS or Tailwind variants. Public library homepage inspected; components were not installed or tested.
-- [Uiverse](https://uiverse.io/) - Community UI-element library with HTML/CSS, Tailwind, React and Figma options, including buttons, inputs, cards and loaders. Public homepage inspected; individual components and their reuse terms require separate review.
-- [Unslop (heydamir)](https://github.com/heydamir/unslop/blob/main/skills/unslop/SKILL.md) - UI redesign skill by Damir Sokolovsky that derives a direction from the product, then reviews spacing, color, icons, copy, type, layout and motion. Distinct from prose tools named Unslop; CC BY 4.0 attribution applies.
-
 ## Skill similarity analysis
 
 The reproducible analysis snapshot covers 70 checksum-verified skill entry files from 52 repositories, out of 183 catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample. This compares skill instructions, not writing outputs, rendered interface designs or component quality.
@@ -419,7 +406,7 @@ An extractive experiment selects 20 paragraph locations to cover repeated, repos
 
 ## Collection and provenance
 
-The catalog includes individual skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses, UI design references, component libraries and research. Video entries distinguish script and prompt guidance from production/API workflows. UI entries distinguish inspiration archives, component libraries and agent skills; a listed design or component is not a tested recommendation or a blanket reuse license. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
+The main catalog includes individual writing skills, multi-skill repositories, prompts, linters, writing guides, books, blogs, newsletters, courses and research. Video entries distinguish script and prompt guidance from production/API workflows. Platform-published and community resources are identified in their descriptions; support for a platform does not imply that platform authored the resource. A repository containing many skills counts as one resource when collected at repository level. Separate skill entries identify their paths. This is an expanding collection, not an exhaustive inventory.
 
 Reading entries distinguish free resources, paid books and courses, and mixed-access publications. Free access is not permission to republish or adapt. A book description, course syllabus or archive index is recorded as such, not as a full review of the underlying material. Newsletter and columnist entries may supply examples for later style analysis; they are not automatically writing instruction. No paid material was purchased or unlocked to build this collection.
 
@@ -435,7 +422,7 @@ Discovery has included GitHub and web searches, [Awesome Humanizer Skills](https
 
 Open an issue with a source URL, or add a record to `catalog.json` in a pull request. Include the author, category, a neutral description, inspected source URL, revision where available, checksum, inspection date and license metadata. For an adaptation, record its stated sources. Do not add rankings, endorsements or performance claims without attribution.
 
-Scope includes writing, editing, research for writing, voice, scripts, correspondence, content planning, published writing examples across languages and UI design. The UI section includes interface inspiration, component libraries and design or redesign skills. Books, courses and paid design services may be included through public descriptions, with access and inspection scope stated. General-purpose apps unrelated to writing or interface design are outside this collection.
+The main collection covers writing, editing, research for writing, voice, scripts, correspondence, content planning and published writing examples across languages. Books and courses may be included through public descriptions, with access and inspection scope stated. Interface inspiration, component libraries and design or redesign skills belong in the [UI design companion](ui/README.md) and its `ui/catalog.json`. General-purpose apps unrelated to either collection are outside scope.
 
 Run `python3 scripts/render.py` after editing the catalog, then `mise run check`. The checks validate catalog records, README freshness, whitespace, links and section anchors. They make public HTTP requests but do not install or execute any collected skill.
 
