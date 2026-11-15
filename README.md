@@ -1,6 +1,8 @@
 # Awesome Anti-Slop
 
-A collection of writing and UI design skills, prompts, tools and references: anti-slop editing, copywriting, prose craft, email, social posts, UGC, video scripts, interface inspiration and component libraries.
+Skills, prompts, tools and references for writing and UI design, from prose and copywriting to interface inspiration and components.
+
+Browse [writing and content](#anti-slop-writing) or [UI design](#ui-design).
 
 199 resources. Alphabetical within each category. No rankings or recommendations.
 
@@ -287,7 +289,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 ## Skill similarity analysis
 
-The reproducible analysis snapshot covers 70 checksum-verified skill entry files from 52 repositories, out of 183 catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample.
+The reproducible analysis snapshot covers 70 checksum-verified skill entry files from 52 repositories, out of 183 catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample. This compares skill instructions, not writing outputs, rendered interface designs or component quality.
 
 A mutual five-nearest-neighbor graph finds 10 connected communities and 16 unconnected skills at the chosen 0.15 similarity threshold. Median group agreement after randomly removing 20% of each skill's retained lines is 0.79 on adjusted Rand agreement (1 means identical partitions; 0 is chance-level agreement). These are exploratory wording groups, not schools of thought or effectiveness rankings.
 

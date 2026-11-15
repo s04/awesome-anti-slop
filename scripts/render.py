@@ -66,7 +66,7 @@ def render_analysis():
     lines = [
         "## Skill similarity analysis",
         "",
-        f"The reproducible analysis snapshot covers {scope['verified_skills']} checksum-verified skill entry files from {scope['repositories']} repositories, out of {scope['catalog_entries']} catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample.",
+        f"The reproducible analysis snapshot covers {scope['verified_skills']} checksum-verified skill entry files from {scope['repositories']} repositories, out of {scope['catalog_entries']} catalog resources. It uses classical text statistics and randomized algorithms, with no model APIs or pretrained embeddings. Books, repository READMEs and linked references are outside this comparable-text sample. This compares skill instructions, not writing outputs, rendered interface designs or component quality.",
         "",
         f"A mutual five-nearest-neighbor graph finds {len(connected)} connected communities and {len(graph['isolates'])} unconnected skills at the chosen 0.15 similarity threshold. Median group agreement after randomly removing 20% of each skill's retained lines is {graph['perturbation_ari_median']:.2f} on adjusted Rand agreement (1 means identical partitions; 0 is chance-level agreement). These are exploratory wording groups, not schools of thought or effectiveness rankings.",
         "",
@@ -131,7 +131,9 @@ def render(entries):
     lines = [
         "# Awesome Anti-Slop",
         "",
-        "A collection of writing and UI design skills, prompts, tools and references: anti-slop editing, copywriting, prose craft, email, social posts, UGC, video scripts, interface inspiration and component libraries.",
+        "Skills, prompts, tools and references for writing and UI design, from prose and copywriting to interface inspiration and components.",
+        "",
+        "Browse [writing and content](#anti-slop-writing) or [UI design](#ui-design).",
         "",
         f"{len(entries)} resources. Alphabetical within each category. No rankings or recommendations.",
         "",
