@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CATEGORIES = [
     "Anti-slop writing",
     "Copywriting and sales",
+    "Marketing and content workflows",
     "Blogs and articles",
     "Email and newsletters",
     "Social posts and scripts",

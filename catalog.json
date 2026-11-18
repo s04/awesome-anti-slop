@@ -4003,6 +4003,26 @@
       "access": "free",
       "related_sources": [],
       "inspection_scope": "Full public essay and its notes inspected; the proposed editing technique was not independently evaluated."
+    },
+    {
+      "title": "boringmarketer/boring-marketing-skills",
+      "url": "https://github.com/boringmarketer/boring-marketing-skills",
+      "repo": "boringmarketer/boring-marketing-skills",
+      "path": "README.md",
+      "category": "Marketing and content workflows",
+      "description": "Marketing skill bundle covering audience research, positioning, brand voice, copy, articles, email and social content, with workflows for local businesses.",
+      "source_url": "https://github.com/boringmarketer/boring-marketing-skills/blob/bd5aaedab44368d76326d98d488697158b886679/README.md",
+      "source_revision": "bd5aaedab44368d76326d98d488697158b886679",
+      "license_spdx": "MIT",
+      "license_basis": "GitHub repository metadata; inspect upstream license before reuse",
+      "archived": false,
+      "source_sha256": "2e4bdabba8e33046dde8296b6e021f0f50ca6fc99e378130e7865cb27b18c572",
+      "checked_at": "2026-11-18",
+      "inspection": "documentation-inspected",
+      "kind": "repository",
+      "id": "boringmarketer/boring-marketing-skills/README.md",
+      "license_scope": "repository metadata only; file-specific terms may differ",
+      "related_sources": []
     }
   ]
 }

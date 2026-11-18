@@ -4,7 +4,7 @@ Skills, prompts, tools and references for writing: anti-slop editing, copywritin
 
 UI inspiration, component libraries and design skills are collected separately in the [UI design companion](ui/README.md).
 
-190 resources. Alphabetical within each category. No rankings or recommendations.
+191 resources. Alphabetical within each category. No rankings or recommendations.
 
 The collection comes first. The next stage is an amalgamation of the collected methods, with attribution and conflicting rules kept visible. Sources remain separate here so that work can be traced back to their authors.
 
@@ -14,6 +14,7 @@ The collection comes first. The next stage is an amalgamation of the collected m
 
 - [Anti-slop writing](#anti-slop-writing)
 - [Copywriting and sales](#copywriting-and-sales)
+- [Marketing and content workflows](#marketing-and-content-workflows)
 - [Blogs and articles](#blogs-and-articles)
 - [Email and newsletters](#email-and-newsletters)
 - [Social posts and scripts](#social-posts-and-scripts)
@@ -79,6 +80,10 @@ The collection comes first. The next stage is an amalgamation of the collected m
 - [robpalmer99/claude-code-copywriting-skills](https://github.com/robpalmer99/claude-code-copywriting-skills) - A collection of direct-response copywriting skills.
 - [yerdaulet-damir/redpen](https://github.com/yerdaulet-damir/redpen) - Copywriting checks for concrete, falsifiable and subject-specific claims.
 - [Zzzeen2552/copywriting-mastery-skill](https://github.com/Zzzeen2552/copywriting-mastery-skill) - Copywriting instructions organized around named copywriters and their methods.
+
+## Marketing and content workflows
+
+- [boringmarketer/boring-marketing-skills](https://github.com/boringmarketer/boring-marketing-skills) - Marketing skill bundle covering audience research, positioning, brand voice, copy, articles, email and social content, with workflows for local businesses.
 
 ## Blogs and articles
 
